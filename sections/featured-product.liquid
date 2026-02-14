@@ -883,6 +883,22 @@
                     {% render 'icon-arrow' %}
                   {% endif %}
                 </a>
+              {%- when 'product_faq' -%}
+                {% render 'product-faq',
+                  items_limit: block.settings.items_limit,
+                  image_size: block.settings.image_size,
+                  image_border_radius: block.settings.image_border_radius,
+                  image_fit: block.settings.image_fit,
+                  margin_top: block.settings.margin_top,
+                  margin_bottom: block.settings.margin_bottom,
+                  border_radius: block.settings.border_radius,
+                  border_color: block.settings.border_color,
+                  question_bg_color: block.settings.question_bg_color,
+                  question_color: block.settings.question_color,
+                  answer_color: block.settings.answer_color,
+                  answer_bg_color: block.settings.answer_bg_color,
+                  block: block
+                %}
               {%- when 'payment_icons' -%}
                 <div class="product-payment-icons" {{ block.shopify_attributes }} style="margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px; text-align:{{ block.settings.alignment }};">
                   {%- if block.settings.payment_override_image != blank -%}
@@ -10192,6 +10208,258 @@
           "unit": "px",
           "label": "Bottom margin",
           "default": 24
+        }
+      ]
+    },
+    {
+      "type": "product_faq",
+      "name": "Product FAQ",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "FAQ Display Options"
+        },
+        {
+          "type": "range",
+          "id": "items_limit",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5,
+          "label": "Maximum FAQ items to show"
+        },
+        {
+          "type": "range",
+          "id": "image_size",
+          "min": 20,
+          "max": 60,
+          "step": 5,
+          "default": 30,
+          "label": "Question image size (px)"
+        },
+        {
+          "type": "range",
+          "id": "image_border_radius",
+          "min": 0,
+          "max": 20,
+          "step": 1,
+          "default": 4,
+          "label": "Image border radius (px)"
+        },
+        {
+          "type": "select",
+          "id": "image_fit",
+          "options": [
+            { "value": "cover", "label": "Cover (crop to fill)" },
+            { "value": "contain", "label": "Contain (show entire image)" }
+          ],
+          "default": "cover",
+          "label": "Image fit style"
+        },
+        {
+          "type": "header",
+          "content": "Text & Spacing"
+        },
+        {
+          "type": "range",
+          "id": "text_size",
+          "min": 12,
+          "max": 18,
+          "step": 1,
+          "default": 14,
+          "label": "Question text size (px)"
+        },
+        {
+          "type": "range",
+          "id": "answer_text_size",
+          "min": 11,
+          "max": 16,
+          "step": 1,
+          "default": 13,
+          "label": "Answer text size (px)"
+        },
+        {
+          "type": "range",
+          "id": "item_padding",
+          "min": 0,
+          "max": 12,
+          "step": 1,
+          "default": 5,
+          "label": "Item padding (px)"
+        },
+        {
+          "type": "range",
+          "id": "question_padding",
+          "min": 4,
+          "max": 16,
+          "step": 2,
+          "default": 8,
+          "label": "Question padding (px)"
+        },
+        {
+          "type": "header",
+          "content": "FAQ Appearance"
+        },
+        {
+          "type": "range",
+          "id": "margin_top",
+          "min": -20,
+          "max": 30,
+          "step": 5,
+          "default": 10,
+          "label": "Top margin (px)"
+        },
+        {
+          "type": "range",
+          "id": "margin_bottom",
+          "min": -20,
+          "max": 30,
+          "step": 5,
+          "default": 10,
+          "label": "Bottom margin (px)"
+        },
+        {
+          "type": "range",
+          "id": "border_radius",
+          "min": 0,
+          "max": 20,
+          "step": 1,
+          "default": 10,
+          "label": "Border radius (px)"
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Border color",
+          "default": "#e5e5e5"
+        },
+        {
+          "type": "header",
+          "content": "Questions"
+        },
+        {
+          "type": "color",
+          "id": "question_color",
+          "label": "Question text color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "question_bg_color",
+          "label": "Question background color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "header",
+          "content": "Answers"
+        },
+        {
+          "type": "color",
+          "id": "answer_color",
+          "label": "Answer text color",
+          "default": "#666666"
+        },
+        {
+          "type": "color",
+          "id": "answer_bg_color",
+          "label": "Answer background color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "checkbox",
+          "id": "accordion_mode",
+          "label": "Accordion mode (only one answer open at a time)",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "FAQ Items"
+        },
+        {
+          "type": "text",
+          "id": "question_1",
+          "label": "Question 1",
+          "default": "Description"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_1",
+          "label": "Answer 1",
+          "default": "<p>Product description goes here.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "question_1_image",
+          "label": "Question 1 image icon (optional)"
+        },
+        {
+          "type": "text",
+          "id": "question_2",
+          "label": "Question 2",
+          "default": "How to apply"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_2",
+          "label": "Answer 2",
+          "default": "<p>Application instructions go here.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "question_2_image",
+          "label": "Question 2 image icon (optional)"
+        },
+        {
+          "type": "text",
+          "id": "question_3",
+          "label": "Question 3",
+          "default": "Ingredients"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_3",
+          "label": "Answer 3",
+          "default": "<p>List of ingredients goes here.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "question_3_image",
+          "label": "Question 3 image icon (optional)"
+        },
+        {
+          "type": "text",
+          "id": "question_4",
+          "label": "Question 4",
+          "default": "Does it really work?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_4",
+          "label": "Answer 4",
+          "default": "<p>Information about efficacy goes here.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "question_4_image",
+          "label": "Question 4 image icon (optional)"
+        },
+        {
+          "type": "text",
+          "id": "question_5",
+          "label": "Question 5",
+          "default": "What is the 100% results guarantee?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_5",
+          "label": "Answer 5",
+          "default": "<p>Details about the guarantee go here.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "question_5_image",
+          "label": "Question 5 image icon (optional)"
         }
       ]
     },
