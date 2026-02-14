@@ -136,6 +136,22 @@
                 {% render 'rating-stars-block', block: block, margins: true, block_attributes: true %}
               {% when 'trustpilot_stars' %}
                 {% render 'trustpilot-stars-block', block: block, margins: true, block_attributes: true %}
+              {%- when 'vb_price' -%}
+                <div class="vb-price no-js-hidden" {{ block.shopify_attributes }} style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem; display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                  {%- assign vb_variant = product.selected_or_first_available_variant -%}
+                  {%- if vb_variant.compare_at_price > vb_variant.price -%}
+                    <span class="vb-price__sale" style="font-size:{{ block.settings.price_size }}px; font-weight:bold; color:{{ block.settings.price_color }};">{{ vb_variant.price | money }}</span>
+                    <span class="vb-price__compare" style="font-size:{{ block.settings.compare_price_size }}px; text-decoration:line-through; opacity:0.7; color:{{ block.settings.compare_price_color }};">{{ vb_variant.compare_at_price | money }}</span>
+                    {%- if block.settings.badge_text != blank -%}
+                      {%- assign vb_savings_amount = vb_variant.compare_at_price | minus: vb_variant.price -%}
+                      {%- assign vb_savings_pct = vb_savings_amount | times: 100 | divided_by: vb_variant.compare_at_price -%}
+                      {%- assign vb_badge_output = block.settings.badge_text | replace: '[percentage]', vb_savings_pct | replace: '[amount]', vb_savings_amount -%}
+                      <span class="vb-price__badge" style="display:inline-block; padding:6px 14px; border-radius:{{ block.settings.badge_radius }}px; background:{{ block.settings.badge_bg_color }}; color:{{ block.settings.badge_text_color }}; font-size:{{ block.settings.badge_font_size }}px; font-weight:600; white-space:nowrap;">{{ vb_badge_output }}</span>
+                    {%- endif -%}
+                  {%- else -%}
+                    <span class="vb-price__regular" style="font-size:{{ block.settings.price_size }}px; font-weight:bold; color:{{ block.settings.price_color }};">{{ vb_variant.price | money }}</span>
+                  {%- endif -%}
+                </div>
               {%- when 'price' -%}
                 <div
                   class="no-js-hidden product-page-price"
@@ -1727,6 +1743,115 @@
           "unit": "px",
           "label": "Top margin",
           "default": 15
+        },
+        {
+          "type": "range",
+          "id": "margin_bottom",
+          "min": 0,
+          "max": 30,
+          "step": 3,
+          "unit": "px",
+          "label": "Bottom margin",
+          "default": 15
+        }
+      ]
+    },
+    {
+      "type": "vb_price",
+      "name": "VB Price",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Price"
+        },
+        {
+          "type": "range",
+          "id": "price_size",
+          "min": 14,
+          "max": 40,
+          "step": 1,
+          "unit": "px",
+          "default": 22,
+          "label": "Price font size"
+        },
+        {
+          "type": "color",
+          "id": "price_color",
+          "default": "#000000",
+          "label": "Price color"
+        },
+        {
+          "type": "range",
+          "id": "compare_price_size",
+          "min": 12,
+          "max": 36,
+          "step": 1,
+          "unit": "px",
+          "default": 18,
+          "label": "Compare price font size"
+        },
+        {
+          "type": "color",
+          "id": "compare_price_color",
+          "default": "#666666",
+          "label": "Compare price color"
+        },
+        {
+          "type": "header",
+          "content": "Badge"
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge text",
+          "info": "Use [percentage] for discount %, [amount] for savings in cents. Leave empty to hide badge."
+        },
+        {
+          "type": "color",
+          "id": "badge_bg_color",
+          "default": "#c0392b",
+          "label": "Badge background color"
+        },
+        {
+          "type": "color",
+          "id": "badge_text_color",
+          "default": "#ffffff",
+          "label": "Badge text color"
+        },
+        {
+          "type": "range",
+          "id": "badge_font_size",
+          "min": 10,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "default": 14,
+          "label": "Badge font size"
+        },
+        {
+          "type": "range",
+          "id": "badge_radius",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "unit": "px",
+          "default": 20,
+          "label": "Badge corner radius"
+        },
+        {
+          "type": "header",
+          "content": "Block margin"
+        },
+        {
+          "type": "range",
+          "id": "margin_top",
+          "min": 0,
+          "max": 30,
+          "step": 3,
+          "unit": "px",
+          "label": "Top margin",
+          "default": 0
         },
         {
           "type": "range",
