@@ -12,6 +12,21 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "a6eb81db-40e4-43e0-972f-32db010a4a56": {
+          "type": "rating_stars",
+          "settings": {
+            "rating": 4.4,
+            "star_color": "#ffcc00",
+            "bg_stars_style": "full",
+            "bg_star_color": "#ececec",
+            "label": "Rated <strong>4.8 Excellent </strong>5273+ Reviews",
+            "size": 14,
+            "alignment": "flex-start",
+            "scroll_id": "",
+            "margin_top": 0,
+            "margin_bottom": 9
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -20,21 +35,6 @@
             "uppercase_title": false,
             "margin_top": 0,
             "margin_bottom": 0
-          }
-        },
-        "a6eb81db-40e4-43e0-972f-32db010a4a56": {
-          "type": "rating_stars",
-          "settings": {
-            "rating": 4.4,
-            "star_color": "#ffcc00",
-            "bg_stars_style": "full",
-            "bg_star_color": "#ececec",
-            "label": "(xxxx Reviews)",
-            "size": 16,
-            "alignment": "flex-start",
-            "scroll_id": "",
-            "margin_top": 0,
-            "margin_bottom": 9
           }
         },
         "price": {
@@ -239,8 +239,8 @@
         }
       },
       "block_order": [
-        "title",
         "a6eb81db-40e4-43e0-972f-32db010a4a56",
+        "title",
         "price",
         "5fcc0428-e768-4cb7-bea3-eb0274198dd1",
         "buy_buttons",
