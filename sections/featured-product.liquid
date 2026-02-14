@@ -883,6 +883,36 @@
                     {% render 'icon-arrow' %}
                   {% endif %}
                 </a>
+              {%- when 'payment_icons' -%}
+                <div class="product-payment-icons" {{ block.shopify_attributes }} style="margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px; text-align:{{ block.settings.alignment }};">
+                  {%- if block.settings.payment_override_image != blank -%}
+                    <img
+                      src="{{ block.settings.payment_override_image | image_url: width: 600 }}"
+                      alt="Payment methods"
+                      loading="lazy"
+                      style="height:{{ block.settings.icon_height }}px; width:auto;"
+                    >
+                  {%- elsif block.settings.use_custom_icons -%}
+                    <div style="display:inline-flex; flex-wrap:wrap; gap:{{ block.settings.icon_spacing }}px; justify-content:{{ block.settings.alignment }}; align-items:center;">
+                      {%- for i in (1..6) -%}
+                        {%- assign svg_id = 'custom_svg_' | append: i -%}
+                        {%- assign svg_val = block.settings[svg_id] -%}
+                        {%- if svg_val != blank -%}
+                          <span style="display:inline-flex; height:{{ block.settings.icon_height }}px; align-items:center;">{{ svg_val }}</span>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div>
+                  {%- else -%}
+                    <div style="display:inline-flex; flex-wrap:wrap; gap:{{ block.settings.icon_spacing }}px; justify-content:{{ block.settings.alignment }}; align-items:center;">
+                      {%- for type in shop.enabled_payment_types -%}
+                        {{ type | payment_type_svg_tag: class: 'product-payment-icon' }}
+                      {%- endfor -%}
+                    </div>
+                  {%- endif -%}
+                </div>
+                <style>
+                  .product-payment-icons .product-payment-icon { height: {{ block.settings.icon_height }}px; width: auto; }
+                </style>
             {%- endcase -%}
           {%- endfor -%}
         </product-info>
@@ -10162,6 +10192,120 @@
           "unit": "px",
           "label": "Bottom margin",
           "default": 24
+        }
+      ]
+    },
+    {
+      "type": "payment_icons",
+      "name": "Payment Icons",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Payment Icons Settings"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_custom_icons",
+          "label": "Use Custom SVG Icons",
+          "default": false,
+          "info": "Enable to use custom SVG icons instead of default payment icons"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_svg_1",
+          "label": "Custom SVG Icon 1",
+          "info": "Paste your custom SVG code here (e.g., for Visa, Mastercard, etc.)"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_svg_2",
+          "label": "Custom SVG Icon 2",
+          "info": "Paste your custom SVG code here"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_svg_3",
+          "label": "Custom SVG Icon 3",
+          "info": "Paste your custom SVG code here"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_svg_4",
+          "label": "Custom SVG Icon 4",
+          "info": "Paste your custom SVG code here"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_svg_5",
+          "label": "Custom SVG Icon 5",
+          "info": "Paste your custom SVG code here"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_svg_6",
+          "label": "Custom SVG Icon 6",
+          "info": "Paste your custom SVG code here"
+        },
+        {
+          "type": "image_picker",
+          "id": "payment_override_image",
+          "label": "Payment Icons Override Image",
+          "info": "Upload a single image containing all your payment icons (will replace all SVG icons when uploaded)"
+        },
+        {
+          "type": "header",
+          "content": "Icon Styling"
+        },
+        {
+          "type": "range",
+          "id": "icon_height",
+          "min": 16,
+          "max": 40,
+          "step": 2,
+          "default": 22,
+          "label": "Icon height (px)"
+        },
+        {
+          "type": "range",
+          "id": "icon_spacing",
+          "min": 2,
+          "max": 20,
+          "step": 2,
+          "default": 6,
+          "label": "Space between icons (px)"
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Icons alignment",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "header",
+          "content": "Spacing"
+        },
+        {
+          "type": "range",
+          "id": "margin_top",
+          "min": -20,
+          "max": 20,
+          "step": 1,
+          "default": 8,
+          "label": "Top margin (px)"
+        },
+        {
+          "type": "range",
+          "id": "margin_bottom",
+          "min": -20,
+          "max": 20,
+          "step": 1,
+          "default": 8,
+          "label": "Bottom margin (px)"
         }
       ]
     }
