@@ -94,7 +94,7 @@
             "secondary_btn_enable_custom_color": false,
             "secondary_btn_custom_color": "#dd1d1d",
             "margin_top": 24,
-            "margin_bottom": 24
+            "margin_bottom": 15
           }
         },
         "e7a28cbe-03cb-4c9d-a2c4-0e3e76ffb3e5": {
@@ -136,20 +136,80 @@
             "margin_bottom": 24
           }
         },
-        "de158e68-5d0d-4819-a625-e2dabdff87d1": {
-          "type": "collapsible_tab",
+        "text_iBA3k9": {
+          "type": "text",
           "settings": {
-            "heading": "Collapsible row",
-            "heading_size": "medium",
-            "icon": "check_box",
-            "filled_icon": false,
-            "collapse_icon": "carret",
-            "display_top_border": true,
-            "open": false,
-            "content": "",
-            "page": "",
-            "margin_top": 24,
-            "margin_bottom": 0
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "center",
+            "text_color": "#121212",
+            "icon_scale": 120,
+            "icon_color": "#121212",
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "styling_container": "container",
+            "enable_bg": false,
+            "bg_color": "#f3f3f3",
+            "corner_radius": 40,
+            "padding": 3,
+            "border_size": 0,
+            "border_style": "solid",
+            "border_color": "#b7b7b7",
+            "text_1": "60-Day Money Back Guarantee",
+            "icon_1": "Workspace Premium",
+            "filled_icon_1": false,
+            "text_2": "",
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "text_3": "",
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "text_4": "",
+            "icon_4": "check_circle",
+            "filled_icon_4": false,
+            "margin_top": 15,
+            "margin_bottom": 9
+          }
+        },
+        "payment_badges_JwQHnw": {
+          "type": "payment_badges",
+          "settings": {
+            "enabled_payment_types": "",
+            "margin_top": 9,
+            "margin_bottom": 15
+          }
+        },
+        "product_faq_wztQ3W": {
+          "type": "product_faq",
+          "settings": {
+            "items_limit": 5,
+            "image_size": 30,
+            "image_border_radius": 4,
+            "image_fit": "cover",
+            "text_size": 14,
+            "answer_text_size": 13,
+            "item_padding": 5,
+            "question_padding": 8,
+            "margin_top": 10,
+            "margin_bottom": 10,
+            "border_radius": 10,
+            "border_color": "#e5e5e5",
+            "question_color": "#000000",
+            "question_bg_color": "#ffffff",
+            "answer_color": "#666666",
+            "answer_bg_color": "#ffffff",
+            "accordion_mode": true,
+            "question_1": "Description",
+            "answer_1": "<p>Product description goes here.</p>",
+            "question_2": "How to apply",
+            "answer_2": "<p>Application instructions go here.</p>",
+            "question_3": "Ingredients",
+            "answer_3": "<p>List of ingredients goes here.</p>",
+            "question_4": "Does it really work?",
+            "answer_4": "<p>Information about efficacy goes here.</p>",
+            "question_5": "What is the 100% results guarantee?",
+            "answer_5": "<p>Details about the guarantee go here.</p>"
           }
         }
       },
@@ -160,7 +220,9 @@
         "buy_buttons",
         "e7a28cbe-03cb-4c9d-a2c4-0e3e76ffb3e5",
         "description",
-        "de158e68-5d0d-4819-a625-e2dabdff87d1"
+        "text_iBA3k9",
+        "payment_badges_JwQHnw",
+        "product_faq_wztQ3W"
       ],
       "custom_css": [],
       "settings": {
