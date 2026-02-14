@@ -1,11 +1,11 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Custom Theme",
+    "theme_name": "Shrine PRO",
     "theme_version": "1.4.3",
-    "theme_author": "",
-    "theme_documentation_url": "https://help.shopify.com",
-    "theme_support_url": "https://help.shopify.com"
+    "theme_author": "Shrine",
+    "theme_documentation_url": "https://app.shrine.io/customer/help-center",
+    "theme_support_url": "https://app.shrine.io/customer/help-center"
   },
   {
     "name": "Authentication",
@@ -23,7 +23,7 @@
     "settings": [
       {
         "type": "paragraph",
-        "content": "Full theme guide can be viewed [here](https://help.shopify.com)."
+        "content": "Full theme guide can be viewed [here](https://dashboard.shrinesolutions.com/customer/help-center)."
       }
     ]
   },

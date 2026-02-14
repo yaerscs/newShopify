@@ -543,7 +543,7 @@
         const stickyAtc = document.querySelector('.sticky-atc');
         let bottomMargin = 50;
         if (stickyAtc) bottomMargin += stickyAtc.clientHeight;
-        const sectionAnimationsObserver = new IntersectionObserver(elements => {
+        const shrineAnimationsObserver = new IntersectionObserver(elements => {
           elements.forEach(element => {
             if (element.isIntersecting) {
               element.target.classList.add('animate--shown');
@@ -566,7 +566,7 @@
               element.classList.add('animate--shown');
               return;
             } 
-            sectionAnimationsObserver.observe(element);
+            shrineAnimationsObserver.observe(element);
           })
         }
 
