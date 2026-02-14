@@ -103,7 +103,7 @@
           --font-body-weight-bold: {{ settings.custom_body_font_weight | plus: 300 | at_most: 1000 }};
         }
       {% endif %}
-      {% if settings.animations_type == blank or settings.animations_type.size < 174 %}main{visibility:hidden !important;}{% endif %}
+
       {% if settings.custom_header_font_link == blank %}
         {{ settings.type_header_font | font_face: font_display: 'swap' }}
         :root {

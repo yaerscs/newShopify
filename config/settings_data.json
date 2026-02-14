@@ -1,6 +1,6 @@
 {
   "current": {
-    "animations_type": "Please include the full token you received from Gumroad with your purchase — for support, contact us on Telegram: @argylegame",
+    "animations_type": "",
     "disable_inspect": true,
     "logo_width": 200,
     "mobile_logo_width": 130,
@@ -556,8 +556,7 @@
         }
       }
     },
-    "content_for_index": [],
-    "_rapid_token_injected": "2025-09-03T07:56:31.596Z"
+    "content_for_index": []
   },
   "presets": {
     "Default": {
