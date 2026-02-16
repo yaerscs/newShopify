@@ -300,7 +300,7 @@
         "subtitle": "",
         "subtitle_size": 16,
         "bg_color_top": "#000000",
-        "bg_color_bottom": "#e49426",
+        "bg_color_bottom": "#d58f26",
         "text_color": "#ffffff",
         "slide_width": 220,
         "slide_width_mobile": 160,
@@ -378,9 +378,9 @@
         "heading_size": "h1",
         "text": "",
         "color_scheme": "background-1",
-        "enable_template_gradient": false,
+        "enable_template_gradient": true,
         "template_gradient_top": "#de9025",
-        "template_gradient_bottom": "#a93232",
+        "template_gradient_bottom": "#000000",
         "image_width": "full",
         "image_ratio": "square",
         "column_alignment": "center",
@@ -419,7 +419,7 @@
         "custom_colors_text": "#2e2a39",
         "custom_cards_colors_background": "#f3f3f3",
         "custom_cards_gradient_background": "",
-        "custom_cards_colors_text": "#2e2a39"
+        "custom_cards_colors_text": "#000000"
       }
     }
   },
