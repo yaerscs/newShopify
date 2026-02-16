@@ -266,6 +266,50 @@
         "desktop_padding_bottom": 36
       }
     },
+    "review-slider-2": {
+      "type": "review-slider-2",
+      "blocks": {
+        "slide_dwMpwk": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ssasdadada.png"
+          }
+        },
+        "slide_MNiaX7": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/hourglass.png"
+          }
+        },
+        "slide_nxGGXV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Jan_29_2026_01_03_40_AM.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_dwMpwk",
+        "slide_MNiaX7",
+        "slide_nxGGXV"
+      ],
+      "settings": {
+        "title": "Thousands of Women Swear by This Scent for Instant Attraction & Lasting Impression",
+        "title_size": 36,
+        "subtitle": "",
+        "subtitle_size": 16,
+        "bg_color_top": "#2b0a0a",
+        "bg_color_bottom": "#e49426",
+        "text_color": "#ffffff",
+        "slide_width": 220,
+        "slide_width_mobile": 160,
+        "slide_gap": 12,
+        "slide_radius": 10,
+        "scroll_speed": 40,
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -286,25 +330,6 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 24
-      }
-    },
-    "review-slider-2": {
-      "type": "review-slider-2",
-      "settings": {
-        "title": "Thousands of Women Swear by This Scent for Instant Attraction & Lasting Impression",
-        "title_size": 36,
-        "subtitle": "",
-        "subtitle_size": 16,
-        "bg_color_top": "#2b0a0a",
-        "bg_color_bottom": "#a93232",
-        "text_color": "#ffffff",
-        "slide_width": 220,
-        "slide_width_mobile": 160,
-        "slide_gap": 12,
-        "slide_radius": 10,
-        "scroll_speed": 40,
-        "padding_top": 50,
-        "padding_bottom": 50
       }
     }
   },
