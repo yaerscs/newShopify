@@ -1,6 +1,6 @@
 {%- style -%}
   .review-slider-{{ section.id }} {
-    background: radial-gradient(ellipse at center, {{ section.settings.bg_color }} 0%, {{ section.settings.bg_color_edge }} 100%);
+    background: linear-gradient(to bottom, {{ section.settings.bg_color_top }} 0%, {{ section.settings.bg_color_bottom }} 100%);
     padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
     overflow: hidden;
   }
@@ -174,15 +174,15 @@
     },
     {
       "type": "color",
-      "id": "bg_color",
-      "label": "Background color (center)",
-      "default": "#a93232"
+      "id": "bg_color_top",
+      "label": "Background color (top)",
+      "default": "#2b0a0a"
     },
     {
       "type": "color",
-      "id": "bg_color_edge",
-      "label": "Background color (edges)",
-      "default": "#2b0a0a"
+      "id": "bg_color_bottom",
+      "label": "Background color (bottom)",
+      "default": "#a93232"
     },
     {
       "type": "color",
