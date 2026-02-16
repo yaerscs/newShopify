@@ -28,7 +28,7 @@
     
     {% comment %} Support for legacy format with question_1 through question_5 {% endcomment %}
     {% if block %}
-      {% for i in (1..5) %}
+      {% for i in (1..6) %}
         {% assign question_key = 'question_' | append: i %}
         {% assign answer_key = 'answer_' | append: i %}
         {% assign image_key = 'question_' | append: i | append: '_image' %}
