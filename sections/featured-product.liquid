@@ -93,6 +93,12 @@
     <div class="featured-product product--product-images-{{ section.settings.product_images }} product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %} isolate">
       <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}{% if product == blank %} hidden{% endif %}">
         {% render 'product-media-gallery', product: product, variant_images: variant_images, has_filtering: has_filtering, section %}
+        {%- assign below_media_blocks = section.blocks | where: 'type', 'below_media_content' -%}
+        {%- if below_media_blocks.size > 0 -%}
+          <div class="product__below-media">
+            {% render 'below-column-blocks', blocks: below_media_blocks %}
+          </div>
+        {%- endif -%}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}{% if section.settings.mobile_pagination == 'dots_overlay' or hide_mobile_slider or section.settings.product_images == 'one' %} product__info-wrapper--top-padding{% endif %}">
         <product-info
@@ -932,128 +938,25 @@
             {%- endcase -%}
           {%- endfor -%}
         </product-info>
+        {%- assign below_info_blocks = section.blocks | where: 'type', 'below_info_content' -%}
+        {%- if below_info_blocks.size > 0 -%}
+          <div class="product__below-info">
+            {% render 'below-column-blocks', blocks: below_info_blocks %}
+          </div>
+        {%- endif -%}
       </div>
       {%- if section.settings.media_position == 'right' -%}
         <div class="grid__item product__media-wrapper small-hide{% if product == blank %} hidden{% endif %}">
           {% render 'product-media-gallery', product: product, variant_images: variant_images, is_duplicate: true %}
+          {%- assign below_media_blocks = section.blocks | where: 'type', 'below_media_content' -%}
+          {%- if below_media_blocks.size > 0 -%}
+            <div class="product__below-media">
+              {% render 'below-column-blocks', blocks: below_media_blocks %}
+            </div>
+          {%- endif -%}
         </div>
       {%- endif -%}
     </div>
-
-    {%- comment -%} Below-content areas for blocks placed under media or info columns {%- endcomment -%}
-    {%- assign below_media_blocks = section.blocks | where: 'type', 'below_media_content' -%}
-    {%- assign below_info_blocks = section.blocks | where: 'type', 'below_info_content' -%}
-    {%- if below_media_blocks.size > 0 or below_info_blocks.size > 0 -%}
-      {%- comment -%} Match column ratios to the product grid above {%- endcomment -%}
-      {%- case section.settings.media_size -%}
-        {%- when 'large' -%}
-          {%- assign below_media_fr = '13fr' -%}
-          {%- assign below_info_fr = '7fr' -%}
-        {%- when 'small' -%}
-          {%- assign below_media_fr = '9fr' -%}
-          {%- assign below_info_fr = '11fr' -%}
-        {%- else -%}
-          {%- assign below_media_fr = '11fr' -%}
-          {%- assign below_info_fr = '9fr' -%}
-      {%- endcase -%}
-      {%- if section.settings.media_position == 'right' -%}
-        {%- assign below_col_1 = below_info_fr -%}
-        {%- assign below_col_2 = below_media_fr -%}
-      {%- else -%}
-        {%- assign below_col_1 = below_media_fr -%}
-        {%- assign below_col_2 = below_info_fr -%}
-      {%- endif -%}
-      <div class="product__below-columns product__below-columns--{{ section.id }}" style="display:grid; grid-template-columns:{{ below_col_1 }} {{ below_col_2 }}; gap:var(--grid-desktop-horizontal-spacing, 2rem);">
-        {%- if section.settings.media_position == 'right' -%}
-          <div class="product__below-info">
-            {%- for block in below_info_blocks -%}
-              <div class="product__below-block" {{ block.shopify_attributes }} style="margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px;">
-                {%- if block.settings.heading != blank -%}
-                  <h3 class="product__below-heading" style="margin-bottom:10px;">{{ block.settings.heading }}</h3>
-                {%- endif -%}
-                {%- if block.settings.richtext != blank -%}
-                  <div class="product__below-richtext rte">{{ block.settings.richtext }}</div>
-                {%- endif -%}
-                {%- if block.settings.image != blank -%}
-                  <div class="product__below-image" style="max-width:{{ block.settings.image_width }}px;">
-                    {{ block.settings.image | image_url: width: block.settings.image_width | image_tag: loading: 'lazy', alt: block.settings.image.alt }}
-                  </div>
-                {%- endif -%}
-                {%- if block.settings.custom_liquid != blank -%}
-                  <div class="product__below-custom">{{ block.settings.custom_liquid }}</div>
-                {%- endif -%}
-              </div>
-            {%- endfor -%}
-          </div>
-          <div class="product__below-media">
-            {%- for block in below_media_blocks -%}
-              <div class="product__below-block" {{ block.shopify_attributes }} style="margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px;">
-                {%- if block.settings.heading != blank -%}
-                  <h3 class="product__below-heading" style="margin-bottom:10px;">{{ block.settings.heading }}</h3>
-                {%- endif -%}
-                {%- if block.settings.richtext != blank -%}
-                  <div class="product__below-richtext rte">{{ block.settings.richtext }}</div>
-                {%- endif -%}
-                {%- if block.settings.image != blank -%}
-                  <div class="product__below-image" style="max-width:{{ block.settings.image_width }}px;">
-                    {{ block.settings.image | image_url: width: block.settings.image_width | image_tag: loading: 'lazy', alt: block.settings.image.alt }}
-                  </div>
-                {%- endif -%}
-                {%- if block.settings.custom_liquid != blank -%}
-                  <div class="product__below-custom">{{ block.settings.custom_liquid }}</div>
-                {%- endif -%}
-              </div>
-            {%- endfor -%}
-          </div>
-        {%- else -%}
-          <div class="product__below-media">
-            {%- for block in below_media_blocks -%}
-              <div class="product__below-block" {{ block.shopify_attributes }} style="margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px;">
-                {%- if block.settings.heading != blank -%}
-                  <h3 class="product__below-heading" style="margin-bottom:10px;">{{ block.settings.heading }}</h3>
-                {%- endif -%}
-                {%- if block.settings.richtext != blank -%}
-                  <div class="product__below-richtext rte">{{ block.settings.richtext }}</div>
-                {%- endif -%}
-                {%- if block.settings.image != blank -%}
-                  <div class="product__below-image" style="max-width:{{ block.settings.image_width }}px;">
-                    {{ block.settings.image | image_url: width: block.settings.image_width | image_tag: loading: 'lazy', alt: block.settings.image.alt }}
-                  </div>
-                {%- endif -%}
-                {%- if block.settings.custom_liquid != blank -%}
-                  <div class="product__below-custom">{{ block.settings.custom_liquid }}</div>
-                {%- endif -%}
-              </div>
-            {%- endfor -%}
-          </div>
-          <div class="product__below-info">
-            {%- for block in below_info_blocks -%}
-              <div class="product__below-block" {{ block.shopify_attributes }} style="margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px;">
-                {%- if block.settings.heading != blank -%}
-                  <h3 class="product__below-heading" style="margin-bottom:10px;">{{ block.settings.heading }}</h3>
-                {%- endif -%}
-                {%- if block.settings.richtext != blank -%}
-                  <div class="product__below-richtext rte">{{ block.settings.richtext }}</div>
-                {%- endif -%}
-                {%- if block.settings.image != blank -%}
-                  <div class="product__below-image" style="max-width:{{ block.settings.image_width }}px;">
-                    {{ block.settings.image | image_url: width: block.settings.image_width | image_tag: loading: 'lazy', alt: block.settings.image.alt }}
-                  </div>
-                {%- endif -%}
-                {%- if block.settings.custom_liquid != blank -%}
-                  <div class="product__below-custom">{{ block.settings.custom_liquid }}</div>
-                {%- endif -%}
-              </div>
-            {%- endfor -%}
-          </div>
-        {%- endif -%}
-      </div>
-      <style>
-        @media screen and (max-width: 749px) {
-          .product__below-columns--{{ section.id }} { grid-template-columns: 1fr !important; }
-        }
-      </style>
-    {%- endif -%}
 
     {% render 'product-media-modal', product: product, variant_images: media_to_render %}
   </div>

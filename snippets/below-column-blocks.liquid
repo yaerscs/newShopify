@@ -1,0 +1,22 @@
+{%- comment -%}
+  Renders below-column content blocks (below_media_content or below_info_content).
+  Usage: {% render 'below-column-blocks', blocks: below_media_blocks %}
+{%- endcomment -%}
+{%- for block in blocks -%}
+  <div class="product__below-block" {{ block.shopify_attributes }} style="margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px;">
+    {%- if block.settings.heading != blank -%}
+      <h3 class="product__below-heading" style="margin-bottom:10px;">{{ block.settings.heading }}</h3>
+    {%- endif -%}
+    {%- if block.settings.richtext != blank -%}
+      <div class="product__below-richtext rte">{{ block.settings.richtext }}</div>
+    {%- endif -%}
+    {%- if block.settings.image != blank -%}
+      <div class="product__below-image" style="max-width:{{ block.settings.image_width }}px;">
+        {{ block.settings.image | image_url: width: block.settings.image_width | image_tag: loading: 'lazy', alt: block.settings.image.alt }}
+      </div>
+    {%- endif -%}
+    {%- if block.settings.custom_liquid != blank -%}
+      <div class="product__below-custom">{{ block.settings.custom_liquid }}</div>
+    {%- endif -%}
+  </div>
+{%- endfor -%}
