@@ -1067,10 +1067,29 @@
   {%- assign below_media_blocks = section.blocks | where: 'type', 'below_media_content' -%}
   {%- assign below_info_blocks = section.blocks | where: 'type', 'below_info_content' -%}
   {%- if below_media_blocks.size > 0 or below_info_blocks.size > 0 -%}
+    {%- comment -%} Match column ratios to the product grid above {%- endcomment -%}
+    {%- case section.settings.media_size -%}
+      {%- when 'large' -%}
+        {%- assign below_media_fr = '13fr' -%}
+        {%- assign below_info_fr = '7fr' -%}
+      {%- when 'small' -%}
+        {%- assign below_media_fr = '9fr' -%}
+        {%- assign below_info_fr = '11fr' -%}
+      {%- else -%}
+        {%- assign below_media_fr = '11fr' -%}
+        {%- assign below_info_fr = '9fr' -%}
+    {%- endcase -%}
+    {%- if section.settings.media_position == 'right' -%}
+      {%- assign below_col_1 = below_info_fr -%}
+      {%- assign below_col_2 = below_media_fr -%}
+    {%- else -%}
+      {%- assign below_col_1 = below_media_fr -%}
+      {%- assign below_col_2 = below_info_fr -%}
+    {%- endif -%}
     <div class="page-width">
-      <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+      <div class="product__below-columns product__below-columns--{{ section.id }}" style="display:grid; grid-template-columns:{{ below_col_1 }} {{ below_col_2 }}; gap:var(--grid-desktop-horizontal-spacing, 2rem);">
         {%- if section.settings.media_position == 'right' -%}
-          <div class="grid__item product__below-info">
+          <div class="product__below-info">
             {%- for block in below_info_blocks -%}
               <div class="product__below-block" {{ block.shopify_attributes }} style="margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px;">
                 {%- if block.settings.heading != blank -%}
@@ -1090,7 +1109,7 @@
               </div>
             {%- endfor -%}
           </div>
-          <div class="grid__item product__below-media">
+          <div class="product__below-media">
             {%- for block in below_media_blocks -%}
               <div class="product__below-block" {{ block.shopify_attributes }} style="margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px;">
                 {%- if block.settings.heading != blank -%}
@@ -1111,7 +1130,7 @@
             {%- endfor -%}
           </div>
         {%- else -%}
-          <div class="grid__item product__below-media">
+          <div class="product__below-media">
             {%- for block in below_media_blocks -%}
               <div class="product__below-block" {{ block.shopify_attributes }} style="margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px;">
                 {%- if block.settings.heading != blank -%}
@@ -1131,7 +1150,7 @@
               </div>
             {%- endfor -%}
           </div>
-          <div class="grid__item product__below-info">
+          <div class="product__below-info">
             {%- for block in below_info_blocks -%}
               <div class="product__below-block" {{ block.shopify_attributes }} style="margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px;">
                 {%- if block.settings.heading != blank -%}
@@ -1154,6 +1173,11 @@
         {%- endif -%}
       </div>
     </div>
+    <style>
+      @media screen and (max-width: 749px) {
+        .product__below-columns--{{ section.id }} { grid-template-columns: 1fr !important; }
+      }
+    </style>
   {%- endif -%}
 
   {% render 'product-media-modal' variant_images: variant_images %}
