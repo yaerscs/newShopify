@@ -287,56 +287,10 @@
         "padding_top": 36,
         "padding_bottom": 24
       }
-    },
-    "review_slider_4eUzxA": {
-      "type": "review-slider",
-      "blocks": {
-        "slide_gTnd8n": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/ssasdadada.png"
-          }
-        },
-        "slide_GyWjTH": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/hourglass.png"
-          }
-        },
-        "slide_9aqXB3": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_zc27ybzc27ybzc27.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "slide_gTnd8n",
-        "slide_GyWjTH",
-        "slide_9aqXB3"
-      ],
-      "name": "Review Slider",
-      "settings": {
-        "title": "Real Transformations from Real Customers",
-        "title_size": 36,
-        "subtitle": "",
-        "subtitle_size": 16,
-        "bg_color": "#a93232",
-        "bg_color_edge": "#2b0a0a",
-        "text_color": "#ffffff",
-        "slide_width": 220,
-        "slide_width_mobile": 160,
-        "slide_gap": 12,
-        "slide_radius": 10,
-        "scroll_speed": 40,
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
     }
   },
   "order": [
     "main",
-    "related-products",
-    "review_slider_4eUzxA"
+    "related-products"
   ]
 }
