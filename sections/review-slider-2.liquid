@@ -2,7 +2,7 @@
   .review-slider-{{ section.id }} {
     --review-slider-text-color: {{ section.settings.text_color }};
     --review-slider-gap: {{ section.settings.slide_gap }}px;
-    --review-slider-visible-desktop: {{ section.settings.desktop_visible_slides }};
+    --review-slider-slide-width: 260px;
     background: linear-gradient(to bottom, {{ section.settings.bg_color_top }} 0%, {{ section.settings.bg_color_bottom }} 100%);
     padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
     overflow: hidden;
@@ -52,7 +52,7 @@
   }
   .review-slider-{{ section.id }} .review-slider__slide {
     flex: 0 0 auto;
-    width: calc((100% - ((var(--review-slider-visible-desktop) - 1) * var(--review-slider-gap))) / var(--review-slider-visible-desktop));
+    width: var(--review-slider-slide-width);
     border-radius: {{ section.settings.slide_radius }}px;
     overflow: hidden;
   }
@@ -93,7 +93,11 @@
   }
 {%- endstyle -%}
 
-<div class="review-slider-{{ section.id }}">
+<div
+  class="review-slider-{{ section.id }}"
+  data-visible-slides-desktop="{{ section.settings.desktop_visible_slides }}"
+  data-slide-gap="{{ section.settings.slide_gap }}"
+>
   <div class="review-slider__wrap">
     <div class="review-slider__text">
       {%- if section.settings.title != blank -%}
@@ -131,6 +135,36 @@
     {%- endif -%}
   </div>
 </div>
+
+<script>
+  (function() {
+    const sectionRoot = document.querySelector('.review-slider-{{ section.id }}');
+    if (!sectionRoot) return;
+
+    const carousel = sectionRoot.querySelector('.review-slider__carousel');
+    if (!carousel) return;
+
+    const updateSlideWidth = () => {
+      if (window.innerWidth < 750) {
+        sectionRoot.style.setProperty('--review-slider-slide-width', '{{ section.settings.slide_width_mobile }}px');
+        return;
+      }
+
+      const visibleSlides = parseFloat(sectionRoot.dataset.visibleSlidesDesktop || '2.2');
+      const gap = parseFloat(sectionRoot.dataset.slideGap || '12');
+      const carouselWidth = carousel.clientWidth;
+      if (!carouselWidth || !visibleSlides) return;
+
+      const computed = (carouselWidth - ((visibleSlides - 1) * gap)) / visibleSlides;
+      sectionRoot.style.setProperty('--review-slider-slide-width', Math.max(120, computed) + 'px');
+    };
+
+    updateSlideWidth();
+    window.addEventListener('resize', updateSlideWidth);
+    document.addEventListener('shopify:section:load', updateSlideWidth);
+    document.addEventListener('shopify:section:reorder', updateSlideWidth);
+  })();
+</script>
 
 {% schema %}
 {
