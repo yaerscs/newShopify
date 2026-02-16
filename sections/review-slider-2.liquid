@@ -1,6 +1,8 @@
 {%- style -%}
   .review-slider-{{ section.id }} {
     --review-slider-text-color: {{ section.settings.text_color }};
+    --review-slider-gap: {{ section.settings.slide_gap }}px;
+    --review-slider-visible-desktop: {{ section.settings.desktop_visible_slides }};
     background: linear-gradient(to bottom, {{ section.settings.bg_color_top }} 0%, {{ section.settings.bg_color_bottom }} 100%);
     padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
     overflow: hidden;
@@ -41,7 +43,7 @@
   }
   .review-slider-{{ section.id }} .review-slider__track {
     display: flex;
-    gap: {{ section.settings.slide_gap }}px;
+    gap: var(--review-slider-gap);
     width: max-content;
     animation: reviewScroll-{{ section.id }} {{ section.settings.scroll_speed }}s linear infinite;
   }
@@ -50,7 +52,7 @@
   }
   .review-slider-{{ section.id }} .review-slider__slide {
     flex: 0 0 auto;
-    width: {{ section.settings.slide_width }}px;
+    width: calc((100% - ((var(--review-slider-visible-desktop) - 1) * var(--review-slider-gap))) / var(--review-slider-visible-desktop));
     border-radius: {{ section.settings.slide_radius }}px;
     overflow: hidden;
   }
@@ -198,14 +200,17 @@
       "content": "Slider"
     },
     {
-      "type": "range",
-      "id": "slide_width",
-      "min": 120,
-      "max": 350,
-      "step": 10,
-      "default": 220,
-      "unit": "px",
-      "label": "Slide width (desktop)"
+      "type": "select",
+      "id": "desktop_visible_slides",
+      "label": "Visible slides (desktop)",
+      "default": "2.2",
+      "options": [
+        { "value": "1.8", "label": "1.8" },
+        { "value": "2", "label": "2.0" },
+        { "value": "2.2", "label": "2.2" },
+        { "value": "2.5", "label": "2.5" },
+        { "value": "3", "label": "3.0" }
+      ]
     },
     {
       "type": "range",
