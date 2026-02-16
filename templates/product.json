@@ -293,6 +293,7 @@
         "slide_MNiaX7",
         "slide_nxGGXV"
       ],
+      "custom_css": [],
       "settings": {
         "title": "Thousands of Women Swear by This Scent for Instant Attraction & Lasting Impression",
         "title_size": 36,
@@ -373,10 +374,13 @@
         "display_id": false,
         "visibility": "always-display",
         "title": "Testimonials",
-        "title_highlight_color": "#6D388B",
+        "title_highlight_color": "#6d388b",
         "heading_size": "h1",
         "text": "",
         "color_scheme": "background-1",
+        "enable_template_gradient": false,
+        "template_gradient_top": "#de9025",
+        "template_gradient_bottom": "#a93232",
         "image_width": "full",
         "image_ratio": "square",
         "column_alignment": "center",
@@ -410,12 +414,12 @@
         "mobile_arrows_position": "under",
         "padding_top": 36,
         "padding_bottom": 36,
-        "custom_colors_background": "#FFFFFF",
+        "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
-        "custom_colors_text": "#2E2A39",
-        "custom_cards_colors_background": "#F3F3F3",
+        "custom_colors_text": "#2e2a39",
+        "custom_cards_colors_background": "#f3f3f3",
         "custom_cards_gradient_background": "",
-        "custom_cards_colors_text": "#2E2A39"
+        "custom_cards_colors_text": "#2e2a39"
       }
     }
   },
