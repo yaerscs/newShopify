@@ -269,29 +269,22 @@
     "review-slider-2": {
       "type": "review-slider-2",
       "blocks": {
-        "slide_dwMpwk": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/ssasdadada.png"
-          }
-        },
-        "slide_MNiaX7": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/hourglass.png"
-          }
-        },
         "slide_nxGGXV": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Jan_29_2026_01_03_40_AM.png"
+            "image": "shopify://shop_images/sdadsadads.webp"
+          }
+        },
+        "slide_MGC9MV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/sdadsadads.webp"
           }
         }
       },
       "block_order": [
-        "slide_dwMpwk",
-        "slide_MNiaX7",
-        "slide_nxGGXV"
+        "slide_nxGGXV",
+        "slide_MGC9MV"
       ],
       "custom_css": [],
       "settings": {
@@ -299,15 +292,15 @@
         "title_size": 36,
         "subtitle": "",
         "subtitle_size": 16,
-        "bg_color_top": "#000000",
+        "bg_color_top": "#121212",
         "bg_color_bottom": "#d58f26",
         "text_color": "#ffffff",
-        "desktop_visible_slides": "2.2",
+        "desktop_visible_slides": "2.5",
         "slide_width_mobile": 160,
         "slide_gap": 12,
         "slide_radius": 10,
         "scroll_speed": 40,
-        "padding_top": 50,
+        "padding_top": 100,
         "padding_bottom": 50
       }
     },
@@ -339,15 +332,17 @@
         "column_H8Jq4i": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/22d51aa2-ae3b-4d33-ab35-79cb114b3753.png",
             "star_rating": 5,
             "title": "Heading",
-            "text": "<p>Share positive thoughts and feedback from your customer..</p>",
+            "text": "<p>Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..</p>",
             "author": "<em><strong>Author</strong></em>"
           }
         },
         "column_jAK7ik": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/4ec24937-c8e4-49f5-88d3-1d45e346b376_db56333f-5c09-4c25-abc8-2a8c141c840c.png",
             "star_rating": 5,
             "title": "Heading",
             "text": "<p>Share positive thoughts and feedback from your customer..</p>",
@@ -357,6 +352,7 @@
         "column_i9fDJK": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/ca0bd45d-dd2e-4d9b-a36c-c4d4c5c41ff5.png",
             "star_rating": 5,
             "title": "Heading",
             "text": "<p>Share positive thoughts and feedback from your customer..</p>",
@@ -373,14 +369,14 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "Testimonials",
-        "title_highlight_color": "#6d388b",
+        "title": "Cast members from the second season of Fallout r",
+        "title_highlight_color": "#d58f26",
         "heading_size": "h1",
-        "text": "",
-        "color_scheme": "background-1",
+        "text": "<p>order of appearance, presented awards or introduced trailers. All other awards were presented by Keighley or Good<br/><br/></p>",
+        "color_scheme": "accent-1",
         "enable_template_gradient": true,
-        "template_gradient_top": "#de9025",
-        "template_gradient_bottom": "#000000",
+        "template_gradient_top": "#d58f26",
+        "template_gradient_bottom": "#121212",
         "image_width": "full",
         "image_ratio": "square",
         "column_alignment": "center",
@@ -416,10 +412,10 @@
         "padding_bottom": 36,
         "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
+        "custom_colors_text": "#ffffff",
         "custom_cards_colors_background": "#f3f3f3",
         "custom_cards_gradient_background": "",
-        "custom_cards_colors_text": "#000000"
+        "custom_cards_colors_text": "#ffffff"
       }
     }
   },
