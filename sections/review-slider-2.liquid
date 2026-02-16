@@ -1,5 +1,6 @@
 {%- style -%}
   .review-slider-{{ section.id }} {
+    --review-slider-text-color: {{ section.settings.text_color }};
     background: linear-gradient(to bottom, {{ section.settings.bg_color_top }} 0%, {{ section.settings.bg_color_bottom }} 100%);
     padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
     overflow: hidden;
@@ -15,19 +16,21 @@
   .review-slider-{{ section.id }} .review-slider__text {
     flex: 0 0 30%;
     max-width: 30%;
-    color: {{ section.settings.text_color }};
+    color: var(--review-slider-text-color);
   }
   .review-slider-{{ section.id }} .review-slider__title {
     font-size: {{ section.settings.title_size }}px;
     line-height: 1.2;
     margin: 0 0 1.5rem;
     font-weight: 700;
+    color: var(--review-slider-text-color) !important;
   }
   .review-slider-{{ section.id }} .review-slider__subtitle {
     font-size: {{ section.settings.subtitle_size }}px;
     line-height: 1.5;
     margin: 0;
     opacity: 0.9;
+    color: var(--review-slider-text-color) !important;
   }
   .review-slider-{{ section.id }} .review-slider__carousel {
     flex: 1;
