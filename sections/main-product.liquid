@@ -11746,13 +11746,50 @@
         },
         {
           "type": "range",
-          "id": "image_width",
-          "min": 100,
-          "max": 800,
-          "step": 50,
-          "default": 400,
+          "id": "width",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "%",
+          "label": "Image width",
+          "default": 100
+        },
+        {
+          "type": "checkbox",
+          "id": "Full_mobile_width",
+          "label": "Full container width on mobile",
+          "default": false,
+          "info": "If enabled & Width is set to 100%, the image will be edge-to-edge on mobile."
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Image alignment",
+          "options": [
+            {
+              "value": "flex-start",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "flex-end",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "range",
+          "id": "border_radius",
+          "min": 0,
+          "max": 40,
+          "step": 2,
           "unit": "px",
-          "label": "Image max width"
+          "label": "Corner radius",
+          "default": 0
         },
         {
           "type": "textarea",

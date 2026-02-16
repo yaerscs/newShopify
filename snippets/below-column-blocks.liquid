@@ -11,8 +11,21 @@
       <div class="product__below-richtext rte">{{ block.settings.richtext }}</div>
     {%- endif -%}
     {%- if block.settings.image != blank -%}
-      <div class="product__below-image" style="max-width:{{ block.settings.image_width }}px;">
-        {{ block.settings.image | image_url: width: block.settings.image_width | image_tag: loading: 'lazy', alt: block.settings.image.alt }}
+      <div
+        class="product-info__image-block{% if block.settings.Full_mobile_width %} product-info__image-block--mobile-full{% endif %}"
+        style="--margin-top:0rem;--margin-bottom:0rem;--image-width:{{ block.settings.width }}%;--image-alignment:{{ block.settings.alignment }};--border-radius:{{ block.settings.border_radius | divided_by: 10.0 }}rem;"
+      >
+        <div class="media media--transparent ratio" style="--ratio-percent: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%">
+          {%- capture sizes -%}
+            (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+            (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px))
+          {%- endcapture -%}
+          {{
+            block.settings.image
+            | image_url: width: 1500
+            | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1250, 1500'
+          }}
+        </div>
       </div>
     {%- endif -%}
     {%- if block.settings.custom_liquid != blank -%}
