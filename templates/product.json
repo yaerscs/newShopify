@@ -148,6 +148,12 @@
             "margin_bottom": 15
           }
         },
+        "custom_liquid_WfnBrg": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"stock-warning-box\">\n  <div class=\"stock-warning-header\">\n    <span class=\"stock-icon\">!</span>\n    <span class=\"stock-title\">WARNING: Low Stock Notice</span>\n  </div>\n  <p class=\"stock-text\">\n    This product sold out <span class=\"stock-underline\">12 times</span> last year. We encourage you to take advantage of the <strong>limited sale</strong> and buy now. Subscribing protects you against future stockouts. <strong>PS:</strong> Only available here, don't buy <a href=\"#\" class=\"stock-link\">fakes on Amazon/eBay</a>.\n  </p>\n</div>\n\n<style>\n  .stock-warning-box {\n    background-color: #fdf2f2; /* Rouge très clair / Rose */\n    border: 2px dashed #d37373; /* Bordure pointillée */\n    padding: 16px;\n    border-radius: 4px;\n    margin: 15px 0;\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n  }\n\n  .stock-warning-header {\n    display: flex;\n    align-items: center;\n    margin-bottom: 8px;\n    color: #a94442; /* Rouge sombre */\n    font-weight: bold;\n    text-transform: uppercase;\n    font-size: 14px;\n    letter-spacing: 0.5px;\n  }\n\n  .stock-icon {\n    background-color: #a94442;\n    color: white;\n    width: 18px;\n    height: 18px;\n    border-radius: 50%;\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    margin-right: 8px;\n    font-size: 12px;\n  }\n\n  .stock-text {\n    margin: 0;\n    font-size: 14px;\n    line-height: 1.5;\n    color: #834040;\n  }\n\n  .stock-underline {\n    text-decoration: underline;\n    font-weight: 500;\n  }\n\n  .stock-link {\n    color: #834040;\n    text-decoration: underline;\n    font-weight: 500;\n  }\n\n  .stock-text strong {\n    color: #a94442;\n  }\n</style>"
+          }
+        },
         "product_faq_wztQ3W": {
           "type": "product_faq",
           "settings": {
@@ -179,6 +185,18 @@
             "question_5": "Do you offer a guarantee?",
             "answer_5": "<p>Yes! All MeridEase's orders are backed by our 60-day money back guarantee.</p><p>Not satisfied with results? Contact us and we'll make it right. </p>"
           }
+        },
+        "image_bBTR8n": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_bv10c9bv10c9bv10.jpg",
+            "width": 100,
+            "Full_mobile_width": false,
+            "alignment": "center",
+            "border_radius": 18,
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
         }
       },
       "block_order": [
@@ -189,7 +207,9 @@
         "description",
         "text_iBA3k9",
         "payment_badges_JwQHnw",
-        "product_faq_wztQ3W"
+        "custom_liquid_WfnBrg",
+        "product_faq_wztQ3W",
+        "image_bBTR8n"
       ],
       "custom_css": [],
       "settings": {
