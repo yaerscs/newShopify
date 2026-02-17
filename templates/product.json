@@ -269,20 +269,27 @@
     "review-slider-2": {
       "type": "review-slider-2",
       "blocks": {
+        "slide_N3jJqL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/facebook-comments_1_1.png"
+          }
+        },
         "slide_nxGGXV": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/sdadsadads.webp"
+            "image": "shopify://shop_images/facebook-comments_3.png"
           }
         },
         "slide_MGC9MV": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/sdadsadads.webp"
+            "image": "shopify://shop_images/facebook-comments_4.png"
           }
         }
       },
       "block_order": [
+        "slide_N3jJqL",
         "slide_nxGGXV",
         "slide_MGC9MV"
       ],
@@ -384,7 +391,7 @@
         "inactive_stars_style": "solid",
         "star_color": "#ffcc00",
         "bg_star_color": "#ececec",
-        "show_quotes": true,
+        "show_quotes": false,
         "quotes_color_scheme": "accent-2",
         "cards_color_scheme": "bg-overlay",
         "type": "slide",
