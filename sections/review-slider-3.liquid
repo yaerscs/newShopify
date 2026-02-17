@@ -245,9 +245,13 @@
     </div>
 
     <div class="review-slider-3__controls">
+      {%- if section.settings.show_arrows -%}
       <button class="review-slider-3__arrow" type="button" data-slider-prev aria-label="Previous">←</button>
+      {%- endif -%}
       <div class="review-slider-3__dots" data-slider-dots></div>
+      {%- if section.settings.show_arrows -%}
       <button class="review-slider-3__arrow" type="button" data-slider-next aria-label="Next">→</button>
+      {%- endif -%}
     </div>
   </div>
 </div>
@@ -302,19 +306,23 @@
       const dots = dotsWrap.querySelectorAll('.review-slider-3__dot');
       dots.forEach((dot, dotIndex) => dot.classList.toggle('is-active', dotIndex === index));
 
-      prevButton.disabled = index <= 0;
-      nextButton.disabled = index >= maxIndex();
+      if (prevButton) prevButton.disabled = index <= 0;
+      if (nextButton) nextButton.disabled = index >= maxIndex();
     };
 
-    prevButton.addEventListener('click', () => {
-      index -= 1;
-      update();
-    });
+    if (prevButton) {
+      prevButton.addEventListener('click', () => {
+        index -= 1;
+        update();
+      });
+    }
 
-    nextButton.addEventListener('click', () => {
-      index += 1;
-      update();
-    });
+    if (nextButton) {
+      nextButton.addEventListener('click', () => {
+        index += 1;
+        update();
+      });
+    }
 
     window.addEventListener('resize', () => {
       renderDots();
@@ -352,6 +360,7 @@
 
     { "type": "header", "content": "Slider" },
     { "type": "range", "id": "slides_desktop", "label": "Slides shown (desktop)", "min": 2, "max": 5, "step": 1, "default": 4 },
+    { "type": "checkbox", "id": "show_arrows", "label": "Show arrows", "default": true },
     {
       "type": "select",
       "id": "slides_mobile",
