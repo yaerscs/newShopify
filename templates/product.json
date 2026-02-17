@@ -82,7 +82,7 @@
             "uppercase_text": true,
             "icon_scale": 120,
             "icon_spacing": 10,
-            "atc_custom_label": "Buy Now",
+            "atc_custom_label": "Pre-Order Now",
             "display_price": false,
             "price_position": "left",
             "price_separator": "•",
@@ -461,6 +461,148 @@
         "padding_bottom_desktop": 0
       }
     },
+    "rr_new_table_hz3Mbd": {
+      "type": "rr-new-table",
+      "blocks": {
+        "table_row_1R34pA": {
+          "type": "table_row",
+          "settings": {
+            "our_icon": "biotech",
+            "our_text": "Clinically Backed",
+            "other_icon": "cancel",
+            "other_text": "Excessive claims"
+          }
+        },
+        "table_row_u4n3KD": {
+          "type": "table_row",
+          "settings": {
+            "our_icon": "verified_user",
+            "our_text": "Highly Concentrated Extracts",
+            "other_icon": "cancel",
+            "other_text": "Powdered Form"
+          }
+        },
+        "table_row_b0bS5x": {
+          "type": "table_row",
+          "settings": {
+            "our_icon": "biotech",
+            "our_text": "Cold Pressed (Preserves Nutrients)",
+            "other_icon": "cancel",
+            "other_text": "Low Nutrient Quality"
+          }
+        },
+        "table_row_i7eQx8": {
+          "type": "table_row",
+          "settings": {
+            "our_icon": "workspace_premium",
+            "our_text": "High-Quality Formula",
+            "other_icon": "cancel",
+            "other_text": "Inconsistent Quality"
+          }
+        },
+        "check_item_7rB11m": {
+          "type": "check_item",
+          "settings": {
+            "text": "Clinically Backed Ingredients"
+          }
+        },
+        "check_item_t8R6Lk": {
+          "type": "check_item",
+          "settings": {
+            "text": "Noticeable Results in Weeks"
+          }
+        },
+        "check_item_j6Wz3n": {
+          "type": "check_item",
+          "settings": {
+            "text": "Long-Term Prostate Health"
+          }
+        },
+        "check_item_k0qP9s": {
+          "type": "check_item",
+          "settings": {
+            "text": "Clean, High-Quality Formula"
+          }
+        }
+      },
+      "block_order": [
+        "table_row_1R34pA",
+        "table_row_u4n3KD",
+        "table_row_b0bS5x",
+        "table_row_i7eQx8",
+        "check_item_7rB11m",
+        "check_item_t8R6Lk",
+        "check_item_j6Wz3n",
+        "check_item_k0qP9s"
+      ],
+      "name": "RR New Table",
+      "settings": {
+        "heading": "MeridEase vs. Other Brands",
+        "button_label": "Try Risk-Free Today",
+        "button_link": "shopify://products/pumpkin-seed-oil-softgels",
+        "subtext": "60-day money back guarantee",
+        "our_label": "Elaré",
+        "other_label": "Other Brands",
+        "our_image": "shopify://shop_images/Kaching-Bundles-Layer_0.png",
+        "bg_fallback_color": "#d58f26",
+        "bg_color_1": "#d58f26",
+        "bg_color_2": "#6d632d",
+        "bg_gradient_angle": 180,
+        "bg_image_size": "cover",
+        "bg_image_position": "center center",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "text_color": "#ffffff",
+        "heading_color": "#ffffff",
+        "heading_accent_color": "#ffffff",
+        "our_col_bg": "#d58f26",
+        "our_col_text": "#ffffff",
+        "other_col_bg": "#ffffff",
+        "other_col_text": "#2b2b2b",
+        "other_col_border": "#ffffff",
+        "other_label_color": "#ffffff",
+        "row_divider_color": "#787878",
+        "checklist_color": "#ffffff",
+        "checklist_tick_color": "#ffffff",
+        "button_bg_color": "#cb8824",
+        "button_text_color": "#ffffff",
+        "button_border_color": "#cb8824",
+        "button_bg_hover_color": "#f2f2f2",
+        "button_text_hover_color": "#2b2b2b",
+        "button_border_hover_color": "#f2f2f2",
+        "button_radius": 6,
+        "left_width_desktop": 50,
+        "our_col_width": 55,
+        "other_col_shift_desktop": 18,
+        "other_col_shift_mobile": 0,
+        "columns_gap_desktop": 40,
+        "left_top_offset_desktop": 0,
+        "column_radius": 6,
+        "heading_size_desktop": 52,
+        "heading_size_mobile": 34,
+        "column_title_size": 20,
+        "column_title_size_mobile": 18,
+        "row_text_size": 16,
+        "row_text_size_mobile": 14,
+        "row_icon_size": 24,
+        "row_icon_size_mobile": 20,
+        "row_min_height_desktop": 86,
+        "row_min_height_mobile": 100,
+        "product_image_height_desktop": 106,
+        "product_image_height_mobile": 120,
+        "product_image_overlap": 86,
+        "product_image_overlap_mobile": 80,
+        "checklist_size": 17,
+        "checklist_size_mobile": 17,
+        "button_text_size": 19,
+        "subtext_size": 15,
+        "subtext_icon_size": 18,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_top_desktop": 100,
+        "padding_bottom_desktop": 36
+      }
+    },
     "clinical_proven_stats_t6y4kN": {
       "type": "clinical-proven-stats",
       "blocks": {
@@ -506,7 +648,7 @@
       "name": "Clinical Proven Stats",
       "settings": {
         "cta_title": "<strong>Clinically Proven.</strong> Support Your Prostate.",
-        "cta_subtitle": "When clean, naturally-derivedingredients meet clinical potency, the results do not disappoint",
+        "cta_subtitle": "When clean, naturally-derived ingredients meet clinical potency, the results do not disappoint",
         "cta_title_size_desktop": 48,
         "cta_title_size_mobile": 32,
         "cta_subtitle_size": 17,
@@ -522,7 +664,7 @@
         "button_bg_hover_color": "#d58f26",
         "button_text_hover_color": "#d58f26",
         "button_border_hover_color": "#d58f26",
-        "shield_text": "30-day money back guarantee",
+        "shield_text": "60-day money back guarantee",
         "shield_icon_size": 18,
         "shield_text_size": 14,
         "bg_color_fallback": "#d58f26",
@@ -563,156 +705,176 @@
         "animation_threshold": 50
       }
     },
-    "rr_new_table_hz3Mbd": {
-      "type": "rr-new-table",
-      "name": "RR New Table",
+    "multicolumn_tfMVR4": {
+      "type": "multicolumn",
       "blocks": {
-        "table_row_1R34pA": {
-          "type": "table_row",
+        "column_RV4GiN": {
+          "type": "column",
           "settings": {
-            "our_icon": "biotech",
-            "our_text": "Clinically Backed",
-            "other_icon": "cancel",
-            "other_text": "Trend-Driven Formulas"
+            "image": "shopify://shop_images/Gemini_Generated_Image_fwkct7fwkct7fwkc.jpg",
+            "muted_autoplay": true,
+            "title": "Pumpkin Seed Oil",
+            "text": "<p>Clinical-grade oil rich in rare Delta-7-Sterols reduces inflammation while flooding your system with Nitric Oxide to relax the \"vice grip\" of smooth muscle tension in your pelvic region.</p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "table_row_u4n3KD": {
-          "type": "table_row",
+        "column_BRRw4e": {
+          "type": "column",
           "settings": {
-            "our_icon": "verified_user",
-            "our_text": "3rd-Party Tested",
-            "other_icon": "cancel",
-            "other_text": "No Transparent Testing"
+            "image": "shopify://shop_images/Gemini_Generated_Image_sokzrsokzrsokzrs.jpg",
+            "muted_autoplay": true,
+            "title": "Saw Palmetto",
+            "text": "<p>Our standardized extract blocks both Type 1 and Type 2 5-alpha-reductase enzymes to stop the DHT fuel source that causes prostate enlargement and disrupts your sleep.</p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "table_row_b0bS5x": {
-          "type": "table_row",
+        "column_Rc7gMm": {
+          "type": "column",
           "settings": {
-            "our_icon": "clean_hands",
-            "our_text": "Allergen-Free and Clean",
-            "other_icon": "cancel",
-            "other_text": "Fillers and Artificial Additives"
-          }
-        },
-        "table_row_i7eQx8": {
-          "type": "table_row",
-          "settings": {
-            "our_icon": "workspace_premium",
-            "our_text": "High-Quality Formula",
-            "other_icon": "cancel",
-            "other_text": "Inconsistent Quality"
-          }
-        },
-        "table_row_w9AN7R": {
-          "type": "table_row",
-          "settings": {
-            "our_icon": "air_freshener",
-            "our_text": "Odorless Aged Garlic Extract",
-            "other_icon": "cancel",
-            "other_text": "Strong Odor"
-          }
-        },
-        "check_item_7rB11m": {
-          "type": "check_item",
-          "settings": {
-            "text": "Clinically Backed Ingredients"
-          }
-        },
-        "check_item_t8R6Lk": {
-          "type": "check_item",
-          "settings": {
-            "text": "Noticeable Results in Weeks"
-          }
-        },
-        "check_item_j6Wz3n": {
-          "type": "check_item",
-          "settings": {
-            "text": "Long-Term Wellness"
-          }
-        },
-        "check_item_k0qP9s": {
-          "type": "check_item",
-          "settings": {
-            "text": "Clean, High-Quality Formula"
+            "image": "shopify://shop_images/Gemini_Generated_Image_1uy6ok1uy6ok1uy6.jpg",
+            "muted_autoplay": true,
+            "title": "Cold-Pressed Softgels",
+            "text": "<p>Cold-pressed extraction preserves delicate bioactive compounds that heat processing destroys, ensuring maximum potency and superior absorption compared to powders or capsules.</p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "table_row_1R34pA",
-        "table_row_u4n3KD",
-        "table_row_b0bS5x",
-        "table_row_i7eQx8",
-        "table_row_w9AN7R",
-        "check_item_7rB11m",
-        "check_item_t8R6Lk",
-        "check_item_j6Wz3n",
-        "check_item_k0qP9s"
+        "column_RV4GiN",
+        "column_BRRw4e",
+        "column_Rc7gMm"
       ],
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "heading": "Elar\u00e9<strong>\u00ae</strong> vs. Other Brands",
-        "button_label": "Try Risk-Free Today",
-        "button_link": "shopify://products/pumpkin-seed-oil-softgels",
-        "subtext": "30-day money back guarantee",
-        "our_label": "Elar\u00e9",
-        "other_label": "Other Brands",
-        "our_image": "",
-        "other_image": "",
-        "bg_fallback_color": "#7f141a",
-        "bg_color_1": "#8a2b2b",
-        "bg_color_2": "#690e0e",
-        "bg_gradient_angle": 165,
-        "bg_image": "",
-        "bg_image_size": "cover",
-        "bg_image_position": "center center",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0,
-        "text_color": "#ffffff",
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "What's inside",
+        "title_highlight_color": "#6D388B",
+        "heading_size": "h1",
+        "button_label": "",
+        "button_link": "",
+        "atc_button_label": "",
+        "atc_product": "",
+        "atc_skip_cart": false,
+        "color_scheme": "custom",
+        "cards_color_scheme": "custom",
+        "cards_corner_radius": 20,
+        "stretch_cards": false,
+        "stretched_cards_content_alignment": "center",
+        "image_width": "full",
+        "image_ratio": "square",
+        "media_position": "top",
+        "column_alignment": "center",
+        "desktop_heading_size": 24,
+        "mobile_heading_size": 22,
+        "desktop_text_size": 16,
+        "mobile_text_size": 15,
+        "desktop_text_top_margin": 10,
+        "mobile_text_top_margin": 10,
+        "desktop_container_padding_y": 24,
+        "desktop_container_padding_x": 24,
+        "mobile_container_padding_y": 24,
+        "mobile_container_padding_x": 24,
+        "type": "slide",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": true,
+        "dots_color_scheme": "inverse",
+        "desktop_full_page": false,
+        "columns_desktop": 3,
+        "slider_desktop": false,
+        "per_move_desktop": 1,
+        "desktop_spacing": 40,
+        "desktop_side_padding": 0,
+        "desktop_padding_calc": true,
+        "desktop_adaptive_height": false,
+        "desktop_dots_position": "under",
+        "desktop_arrows_position": "sides",
+        "columns_mobile": "1",
+        "slider_mobile": true,
+        "enable_mobile_preview": false,
+        "mobile_adaptive_height": false,
+        "mobile_dots_position": "under",
+        "mobile_arrows_position": "under",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_colors_background": "#6b612b",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "custom_cards_colors_background": "#d58f26",
+        "custom_cards_gradient_background": "",
+        "custom_cards_colors_heading": "#ffffff",
+        "custom_cards_colors_text": "#ffffff"
+      }
+    },
+    "e_store_faq_XArNUd": {
+      "type": "e_store-faq",
+      "blocks": {
+        "faq_item_Bnqt7c": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I take this when I'm already on medication?",
+            "answer": "<p>Always consult your healthcare provider before adding this supplement to your regimen if you are currently being treated for a medical condition.</p>"
+          }
+        },
+        "faq_item_wPGzFY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does this product contain common allergens?",
+            "answer": "<p>Our product is free from gluten, dairy, soy and artificial preservatives.</p>"
+          }
+        },
+        "faq_item_hyjDTe": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "<p>Standard shipping typically takes 2-3 business days for processing, followed by a 7-14 business day transit time. Please note your location as well as customs heavily influence shipment time.</p>"
+          }
+        },
+        "faq_item_Npc8DG": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How does your money-back guarantee work?",
+            "answer": "<p>If you're not satisfied with your results, contact us and we'll make it right. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_Bnqt7c",
+        "faq_item_wPGzFY",
+        "faq_item_hyjDTe",
+        "faq_item_Npc8DG"
+      ],
+      "name": "Store FAQ",
+      "settings": {
+        "use_theme_colors": false,
+        "heading": "Questions? We're here to help.",
+        "subtitle": "<p>You can also chat with us on the bottom right!</p>",
         "heading_color": "#ffffff",
-        "heading_accent_color": "#ffffff",
-        "our_col_bg": "#9f3f3f",
-        "our_col_text": "#ffffff",
-        "other_col_bg": "#ffffff",
-        "other_col_text": "#2b2b2b",
-        "other_col_border": "#f0f0f0",
-        "other_label_color": "#ffffff",
-        "row_divider_color": "#ffffff",
-        "checklist_color": "#ffffff",
-        "checklist_tick_color": "#ffffff",
-        "button_bg_color": "#ffffff",
-        "button_text_color": "#2b2b2b",
-        "button_border_color": "#ffffff",
-        "button_bg_hover_color": "#f2f2f2",
-        "button_text_hover_color": "#2b2b2b",
-        "button_border_hover_color": "#f2f2f2",
-        "button_radius": 6,
-        "left_width_desktop": 50,
-        "our_col_width": 55,
-        "columns_gap_desktop": 40,
-        "left_top_offset_desktop": 0,
-        "column_radius": 6,
-        "heading_size_desktop": 52,
-        "heading_size_mobile": 34,
-        "column_title_size": 20,
-        "column_title_size_mobile": 18,
-        "row_text_size": 16,
-        "row_text_size_mobile": 14,
-        "row_icon_size": 24,
-        "row_icon_size_mobile": 20,
-        "row_min_height_desktop": 86,
-        "row_min_height_mobile": 100,
-        "product_image_height_desktop": 106,
-        "product_image_height_mobile": 120,
-        "product_image_overlap": 86,
-        "product_image_overlap_mobile": 80,
-        "checklist_size": 17,
-        "checklist_size_mobile": 17,
-        "button_text_size": 19,
-        "subtext_size": 15,
-        "subtext_icon_size": 18,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40,
-        "padding_top_desktop": 36,
-        "padding_bottom_desktop": 36
+        "section_padding": 60,
+        "section_bg_color": "#d58f26",
+        "border_radius": 8,
+        "border_color": "#e5e5e5",
+        "question_color": "#ffffff",
+        "question_bg_color": "#d58f26",
+        "answer_color": "#ffffff",
+        "answer_bg_color": "#d58f26",
+        "accordion_mode": true,
+        "heading_font_size": 36,
+        "heading_font_size_mobile": 30,
+        "subtitle_font_size": 16,
+        "subtitle_font_size_mobile": 14,
+        "question_font_size": 16,
+        "question_font_size_mobile": 14,
+        "answer_font_size": 14,
+        "answer_font_size_mobile": 13
       }
     }
   },
@@ -722,7 +884,9 @@
     "related-products",
     "review_slider_3_cabtXH",
     "custom_columns_icons_image_LM9k84",
+    "rr_new_table_hz3Mbd",
     "clinical_proven_stats_t6y4kN",
-    "rr_new_table_hz3Mbd"
+    "multicolumn_tfMVR4",
+    "e_store_faq_XArNUd"
   ]
 }
