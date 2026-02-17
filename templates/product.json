@@ -151,7 +151,7 @@
         "stock_warning_CKpqhM": {
           "type": "stock_warning",
           "settings": {
-            "title": "NOTE: High Demand Notice",
+            "title": "NOTE: Pre-order notice",
             "icon_text": "!",
             "body": "<p>This product sold out <strong>12 times</strong> last year. We encourage you to take advantage of the <strong>limited sale</strong> and buy now. Due to excess demand, we are placing orders on pre-order while we wait for our March batch to arrive.</p>",
             "background_color": "#fdf2f2",
