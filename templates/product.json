@@ -311,6 +311,42 @@
         "padding_bottom": 50
       }
     },
+    "custom_columns_icons_image_9R2kLm": {
+      "type": "custom-columns-icons-image",
+      "settings": {
+        "title": "Feel Better. Every Day.",
+        "subtitle": "From consistent heart support to easy daily use, here’s what makes Elaré® Aged Garlic different.",
+        "title_size_desktop": 52,
+        "title_size_mobile": 34,
+        "subtitle_size": 18,
+        "bg_color_top": "#a13a3f",
+        "bg_color_bottom": "#8e0912",
+        "text_color": "#ffffff",
+        "icon_color": "#ffffff",
+        "icon_1": "ecg_heart",
+        "label_1": "Heart Health Support",
+        "icon_2": "health_and_safety",
+        "label_2": "Daily Immune Support",
+        "icon_3": "gastroenterology",
+        "label_3": "Gentle on the Stomach",
+        "icon_4": "experiment",
+        "label_4": "Third-Party Lab Tested",
+        "icon_size": 52,
+        "feature_text_size": 18,
+        "image": "",
+        "image_position": "right",
+        "image_width_desktop": 560,
+        "show_rings": true,
+        "column_gap_mobile": 20,
+        "row_gap_mobile": 30,
+        "column_gap_desktop": 40,
+        "row_gap_desktop": 40,
+        "padding_top_mobile": 27,
+        "padding_bottom_mobile": 0,
+        "padding_top_desktop": 36,
+        "padding_bottom_desktop": 0
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -428,6 +464,7 @@
   "order": [
     "main",
     "review-slider-2",
+    "custom_columns_icons_image_9R2kLm",
     "related-products",
     "review_slider_3_cabtXH"
   ]
