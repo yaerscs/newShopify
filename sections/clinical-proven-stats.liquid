@@ -13,13 +13,21 @@
     position: absolute;
     inset: 0;
     z-index: -2;
-    background:
-      linear-gradient(to bottom, {{ section.settings.bg_color_top }} 0%, {{ section.settings.bg_color_bottom }} 100%)
-      {%- if section.settings.bg_image != blank -%},
-      url({{ section.settings.bg_image | image_url: width: 2200 }})
-      {%- endif -%};
-    background-size: cover, {{ section.settings.bg_image_size }};
-    background-position: center, {{ section.settings.bg_image_position }};
+    background-image:
+      {%- if section.settings.bg_image != blank -%}
+        url({{ section.settings.bg_image | image_url: width: 2200 }}),
+      {%- endif -%}
+      linear-gradient(to bottom, {{ section.settings.bg_color_top }} 0%, {{ section.settings.bg_color_bottom }} 100%);
+    background-size:
+      {%- if section.settings.bg_image != blank -%}
+        {{ section.settings.bg_image_size }},
+      {%- endif -%}
+      cover;
+    background-position:
+      {%- if section.settings.bg_image != blank -%}
+        {{ section.settings.bg_image_position }},
+      {%- endif -%}
+      center;
     background-repeat: no-repeat;
   }
 
