@@ -463,38 +463,37 @@
     },
     "clinical_proven_stats_t6y4kN": {
       "type": "clinical-proven-stats",
-      "name": "Clinical Proven Stats",
       "blocks": {
         "stat_Aq8sEr": {
           "type": "stat",
           "settings": {
             "percent": 94,
-            "heading": "Said they felt fewer sick days",
-            "caption": "after taking Resilia consistently for 2+ weeks"
+            "heading": "Said that they are experiencing a more comfortable prostate",
+            "caption": ""
           }
         },
         "stat_k29Qee": {
           "type": "stat",
           "settings": {
             "percent": 96,
-            "heading": "Would recommend Resilia to a friend",
-            "caption": "for natural immune and gut support"
+            "heading": "Would recommend MeridEase Labs to a friend",
+            "caption": ""
           }
         },
         "stat_4jXCBn": {
           "type": "stat",
           "settings": {
             "percent": 92,
-            "heading": "Noticed improved digestion and less bloating",
-            "caption": "especially after meals"
+            "heading": "Would buy again",
+            "caption": ""
           }
         },
         "stat_8EZ7tS": {
           "type": "stat",
           "settings": {
             "percent": 89,
-            "heading": "Said they prefer Resilia's formula",
-            "caption": "over other oregano supplements they have tried"
+            "heading": "Said they prefer Our formula over any other brands",
+            "caption": ""
           }
         }
       },
@@ -504,31 +503,32 @@
         "stat_4jXCBn",
         "stat_8EZ7tS"
       ],
+      "name": "Clinical Proven Stats",
       "settings": {
-        "cta_title": "<strong>Clinically Proven.</strong> More Energy. A Healthier Gut.",
-        "cta_subtitle": "When clean, plant-based ingredients meet clinical potency, the results speak for themselves.",
+        "cta_title": "<strong>Clinically Proven.</strong> Support Your Prostate.",
+        "cta_subtitle": "When clean, naturally-derivedingredients meet clinical potency, the results do not disappoint",
         "cta_title_size_desktop": 48,
         "cta_title_size_mobile": 32,
         "cta_subtitle_size": 17,
         "button_label": "Try Risk-Free Today",
-        "button_link": "#scroll-pro",
+        "button_link": "shopify://products/pumpkin-seed-oil-softgels",
         "button_direction": "center",
         "button_direction_mobile": "center",
         "button_full_width_mobile": true,
         "button_radius": 6,
-        "button_bg_color": "#d9edcf",
-        "button_text_color": "#014c3e",
-        "button_border_color": "#d9edcf",
-        "button_bg_hover_color": "#cde5c0",
-        "button_text_hover_color": "#014c3e",
-        "button_border_hover_color": "#cde5c0",
+        "button_bg_color": "#d58f26",
+        "button_text_color": "#ffffff",
+        "button_border_color": "#d58f26",
+        "button_bg_hover_color": "#d58f26",
+        "button_text_hover_color": "#d58f26",
+        "button_border_hover_color": "#d58f26",
         "shield_text": "30-day money back guarantee",
         "shield_icon_size": 18,
         "shield_text_size": 14,
-        "bg_color_fallback": "#014c3e",
-        "bg_color_top": "#014c3e",
-        "bg_color_bottom": "#016450",
-        "bg_image": "",
+        "bg_color_fallback": "#d58f26",
+        "bg_color_top": "#d58f26",
+        "bg_color_bottom": "#d58f26",
+        "bg_image": "shopify://shop_images/Gemini_Generated_Image_t8x0nqt8x0nqt8x0.png",
         "bg_image_size": "cover",
         "bg_image_position": "center center",
         "overlay_color": "#014c3e",
@@ -543,11 +543,11 @@
         "padding_top_desktop": 80,
         "padding_bottom_desktop": 80,
         "text_color": "#ffffff",
-        "percent_color": "#e3ffde",
+        "percent_color": "#d58f26",
         "heading_color": "#ffffff",
         "caption_color": "#ffffff",
         "cta_title_color": "#ffffff",
-        "cta_title_accent_color": "#e3ffde",
+        "cta_title_accent_color": "#d58f26",
         "cta_subtitle_color": "#ffffff",
         "shield_text_color": "#ffffff",
         "divider_color": "#ffffff",
