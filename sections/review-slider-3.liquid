@@ -352,7 +352,16 @@
 
     { "type": "header", "content": "Slider" },
     { "type": "range", "id": "slides_desktop", "label": "Slides shown (desktop)", "min": 2, "max": 5, "step": 1, "default": 4 },
-    { "type": "range", "id": "slides_mobile", "label": "Slides shown (mobile)", "min": 1, "max": 2, "step": 1, "default": 1 },
+    {
+      "type": "select",
+      "id": "slides_mobile",
+      "label": "Slides shown (mobile)",
+      "default": "1",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
+      ]
+    },
     { "type": "range", "id": "slide_gap", "label": "Gap", "min": 8, "max": 40, "step": 2, "unit": "px", "default": 16 },
     { "type": "range", "id": "card_radius", "label": "Card radius", "min": 0, "max": 30, "step": 1, "unit": "px", "default": 10 },
     { "type": "range", "id": "image_radius", "label": "Image radius", "min": 0, "max": 30, "step": 1, "unit": "px", "default": 0 },
