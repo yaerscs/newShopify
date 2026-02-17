@@ -345,43 +345,46 @@
             "name": "Michael L.",
             "verified_text": "Verified Customer",
             "tag_1": "Finally Free",
-            "tag_2": "No Regrests",
+            "tag_2": "No Regrets",
             "tag_3": ""
           }
         },
         "review_gc9ze9": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/ca0bd45d-dd2e-4d9b-a36c-c4d4c5c41ff5.png",
             "stars": 5,
-            "quote": "\"This is easily the best smelling perfume I have ever had!\"",
-            "name": "Brenda M.",
+            "quote": "\"Can't believe I haven't heard of these guys before...\"",
+            "name": "Messari I.",
             "verified_text": "Verified Customer",
-            "tag_1": "Favourite Scent",
-            "tag_2": "Delicious",
+            "tag_1": "Revitalised",
+            "tag_2": "Loving It!",
             "tag_3": ""
           }
         },
         "review_UTHei6": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/4ec24937-c8e4-49f5-88d3-1d45e346b376_db56333f-5c09-4c25-abc8-2a8c141c840c.png",
             "stars": 5,
-            "quote": "\"This is easily the best smelling perfume I have ever had!\"",
-            "name": "Brenda M.",
+            "quote": "\"Heard of the hype, but was skeptical of the ads. Tried to give it a go and wow, not regrets\"",
+            "name": "Mike L.",
             "verified_text": "Verified Customer",
-            "tag_1": "Favourite Scent",
-            "tag_2": "Delicious",
+            "tag_1": "Will Buy Again",
+            "tag_2": "No Regrets",
             "tag_3": ""
           }
         },
         "review_QHJncD": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_npdxppnpdxppnpdx.png",
             "stars": 5,
-            "quote": "\"This is easily the best smelling perfume I have ever had!\"",
+            "quote": "\"I tried everything. I swear. But MeridEase changed my mind... this is crazy.",
             "name": "Brenda M.",
             "verified_text": "Verified Customer",
-            "tag_1": "Favourite Scent",
-            "tag_2": "Delicious",
+            "tag_1": "Finally Free",
+            "tag_2": "Found A Solution!",
             "tag_3": ""
           }
         }
@@ -406,7 +409,10 @@
         "card_text_color": "#2b2b2b",
         "accent_color": "#d58f26",
         "slides_desktop": 4,
+        "show_arrows_desktop": false,
+        "show_arrows_mobile": true,
         "slides_mobile": "1",
+        "mobile_teaser": 24,
         "slide_gap": 16,
         "card_radius": 10,
         "image_radius": 0,
