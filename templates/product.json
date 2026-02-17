@@ -295,7 +295,7 @@
       ],
       "custom_css": [],
       "settings": {
-        "title": "Thousands of Women Swear by This Scent for Instant Attraction & Lasting Impression",
+        "title": "Thousands Of Men Swear By Us - Rediscovering Their Past Again",
         "title_size": 36,
         "subtitle": "",
         "subtitle_size": 16,
@@ -333,96 +333,89 @@
         "padding_bottom": 24
       }
     },
-    "testimonials_XMhpxJ": {
-      "type": "testimonials",
+    "review_slider_3_cabtXH": {
+      "type": "review-slider-3",
       "blocks": {
-        "column_H8Jq4i": {
-          "type": "column",
+        "review_mthnEy": {
+          "type": "review",
           "settings": {
-            "image": "shopify://shop_images/22d51aa2-ae3b-4d33-ab35-79cb114b3753.png",
-            "star_rating": 5,
-            "title": "Heading",
-            "text": "<p>Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..Share positive thoughts and feedback from your customer..</p>",
-            "author": "<em><strong>Author</strong></em>"
+            "image": "shopify://shop_images/e946cd41-c9ae-4615-b849-a61603ab5750.png",
+            "stars": 5,
+            "quote": "\"No way!! It's crazy how my sleep has been so undisturbed these days.",
+            "name": "Michael L.",
+            "verified_text": "Verified Customer",
+            "tag_1": "Finally Free",
+            "tag_2": "No Regrests",
+            "tag_3": ""
           }
         },
-        "column_jAK7ik": {
-          "type": "column",
+        "review_gc9ze9": {
+          "type": "review",
           "settings": {
-            "image": "shopify://shop_images/4ec24937-c8e4-49f5-88d3-1d45e346b376_db56333f-5c09-4c25-abc8-2a8c141c840c.png",
-            "star_rating": 5,
-            "title": "Heading",
-            "text": "<p>Share positive thoughts and feedback from your customer..</p>",
-            "author": "<em><strong>Author</strong></em>"
+            "stars": 5,
+            "quote": "\"This is easily the best smelling perfume I have ever had!\"",
+            "name": "Brenda M.",
+            "verified_text": "Verified Customer",
+            "tag_1": "Favourite Scent",
+            "tag_2": "Delicious",
+            "tag_3": ""
           }
         },
-        "column_i9fDJK": {
-          "type": "column",
+        "review_UTHei6": {
+          "type": "review",
           "settings": {
-            "image": "shopify://shop_images/ca0bd45d-dd2e-4d9b-a36c-c4d4c5c41ff5.png",
-            "star_rating": 5,
-            "title": "Heading",
-            "text": "<p>Share positive thoughts and feedback from your customer..</p>",
-            "author": "<em><strong>Author</strong></em>"
+            "stars": 5,
+            "quote": "\"This is easily the best smelling perfume I have ever had!\"",
+            "name": "Brenda M.",
+            "verified_text": "Verified Customer",
+            "tag_1": "Favourite Scent",
+            "tag_2": "Delicious",
+            "tag_3": ""
+          }
+        },
+        "review_QHJncD": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "quote": "\"This is easily the best smelling perfume I have ever had!\"",
+            "name": "Brenda M.",
+            "verified_text": "Verified Customer",
+            "tag_1": "Favourite Scent",
+            "tag_2": "Delicious",
+            "tag_3": ""
           }
         }
       },
       "block_order": [
-        "column_H8Jq4i",
-        "column_jAK7ik",
-        "column_i9fDJK"
+        "review_mthnEy",
+        "review_gc9ze9",
+        "review_UTHei6",
+        "review_QHJncD"
       ],
-      "name": "Testimonials",
+      "name": "Review Slider 3",
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "Cast members from the second season of Fallout r",
-        "title_highlight_color": "#d58f26",
-        "heading_size": "h1",
-        "text": "<p>order of appearance, presented awards or introduced trailers. All other awards were presented by Keighley or Good<br/><br/></p>",
-        "color_scheme": "accent-1",
-        "enable_template_gradient": true,
-        "template_gradient_top": "#d58f26",
-        "template_gradient_bottom": "#121212",
-        "image_width": "full",
-        "image_ratio": "square",
-        "column_alignment": "center",
-        "show_stars": true,
-        "inactive_stars_style": "solid",
-        "star_color": "#ffcc00",
-        "bg_star_color": "#ececec",
-        "show_quotes": false,
-        "quotes_color_scheme": "accent-2",
-        "cards_color_scheme": "bg-overlay",
-        "type": "slide",
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "arrows_color_scheme": "inverse",
-        "transparent_arrows": true,
-        "dots_color_scheme": "inverse",
-        "desktop_full_page": false,
-        "columns_desktop": 3,
-        "slider_desktop": false,
-        "per_move_desktop": 1,
-        "desktop_spacing": 40,
-        "desktop_side_padding": 0,
-        "desktop_padding_calc": true,
-        "desktop_adaptive_height": false,
-        "desktop_dots_position": "under",
-        "desktop_arrows_position": "sides",
-        "slider_mobile": true,
-        "enable_mobile_preview": false,
-        "mobile_adaptive_height": false,
-        "mobile_dots_position": "under",
-        "mobile_arrows_position": "under",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_cards_colors_background": "#f3f3f3",
-        "custom_cards_gradient_background": "",
-        "custom_cards_colors_text": "#ffffff"
+        "title": "Compliments You Weren’t Expecting — <em>But Secretly Love</em>",
+        "subtitle": "From subtle glances to bold compliments",
+        "title_size_desktop": 46,
+        "title_size_mobile": 28,
+        "subtitle_size": 20,
+        "bg_color_top": "#d58f26",
+        "bg_color_bottom": "#121212",
+        "text_color": "#ffffff",
+        "card_bg_color": "#ffffff",
+        "card_text_color": "#2b2b2b",
+        "accent_color": "#d58f26",
+        "slides_desktop": 4,
+        "slides_mobile": "1",
+        "slide_gap": 16,
+        "card_radius": 10,
+        "image_radius": 0,
+        "quote_size": 18,
+        "author_size": 14,
+        "padding_top_desktop": 60,
+        "padding_bottom_desktop": 62,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
       }
     }
   },
@@ -430,6 +423,6 @@
     "main",
     "review-slider-2",
     "related-products",
-    "testimonials_XMhpxJ"
+    "review_slider_3_cabtXH"
   ]
 }
