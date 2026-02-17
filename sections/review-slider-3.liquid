@@ -171,6 +171,26 @@
     cursor: pointer;
   }
 
+  {% unless section.settings.show_arrows_desktop %}
+    @media screen and (min-width: 915px) {
+      .review-slider-3-{{ section.id }} [data-slider-prev],
+      .review-slider-3-{{ section.id }} [data-slider-next],
+      .review-slider-3-{{ section.id }} [data-slider-dots] {
+        display: none !important;
+      }
+    }
+  {% endunless %}
+
+  {% unless section.settings.show_arrows_mobile %}
+    @media screen and (max-width: 914px) {
+      .review-slider-3-{{ section.id }} [data-slider-prev],
+      .review-slider-3-{{ section.id }} [data-slider-next],
+      .review-slider-3-{{ section.id }} [data-slider-dots] {
+        display: none !important;
+      }
+    }
+  {% endunless %}
+
   .review-slider-3-{{ section.id }} .review-slider-3__dots {
     display: inline-flex;
     gap: 0.45rem;
@@ -245,13 +265,9 @@
     </div>
 
     <div class="review-slider-3__controls">
-      {%- if section.settings.show_arrows -%}
       <button class="review-slider-3__arrow" type="button" data-slider-prev aria-label="Previous">←</button>
-      {%- endif -%}
       <div class="review-slider-3__dots" data-slider-dots></div>
-      {%- if section.settings.show_arrows -%}
       <button class="review-slider-3__arrow" type="button" data-slider-next aria-label="Next">→</button>
-      {%- endif -%}
     </div>
   </div>
 </div>
@@ -360,7 +376,8 @@
 
     { "type": "header", "content": "Slider" },
     { "type": "range", "id": "slides_desktop", "label": "Slides shown (desktop)", "min": 2, "max": 5, "step": 1, "default": 4 },
-    { "type": "checkbox", "id": "show_arrows", "label": "Show arrows", "default": true },
+    { "type": "checkbox", "id": "show_arrows_desktop", "label": "Show arrows on desktop", "default": true },
+    { "type": "checkbox", "id": "show_arrows_mobile", "label": "Show arrows on mobile", "default": true },
     {
       "type": "select",
       "id": "slides_mobile",
