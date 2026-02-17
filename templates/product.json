@@ -299,9 +299,9 @@
         "title_size": 36,
         "subtitle": "",
         "subtitle_size": 16,
-        "bg_color_top": "#121212",
+        "bg_color_top": "#ffffff",
         "bg_color_bottom": "#d58f26",
-        "text_color": "#ffffff",
+        "text_color": "#121212",
         "desktop_visible_slides": "2.5",
         "slide_width_mobile": 160,
         "slide_gap": 12,
@@ -309,42 +309,6 @@
         "scroll_speed": 40,
         "padding_top": 100,
         "padding_bottom": 50
-      }
-    },
-    "custom_columns_icons_image_9R2kLm": {
-      "type": "custom-columns-icons-image",
-      "settings": {
-        "title": "Feel Better. Every Day.",
-        "subtitle": "From consistent heart support to easy daily use, here’s what makes Elaré® Aged Garlic different.",
-        "title_size_desktop": 52,
-        "title_size_mobile": 34,
-        "subtitle_size": 18,
-        "bg_color_top": "#a13a3f",
-        "bg_color_bottom": "#8e0912",
-        "text_color": "#ffffff",
-        "icon_color": "#ffffff",
-        "icon_1": "ecg_heart",
-        "label_1": "Heart Health Support",
-        "icon_2": "health_and_safety",
-        "label_2": "Daily Immune Support",
-        "icon_3": "gastroenterology",
-        "label_3": "Gentle on the Stomach",
-        "icon_4": "experiment",
-        "label_4": "Third-Party Lab Tested",
-        "icon_size": 52,
-        "feature_text_size": 18,
-        "image": "",
-        "image_position": "right",
-        "image_width_desktop": 560,
-        "show_rings": true,
-        "column_gap_mobile": 20,
-        "row_gap_mobile": 30,
-        "column_gap_desktop": 40,
-        "row_gap_desktop": 40,
-        "padding_top_mobile": 27,
-        "padding_bottom_mobile": 0,
-        "padding_top_desktop": 36,
-        "padding_bottom_desktop": 0
       }
     },
     "related-products": {
@@ -439,7 +403,7 @@
         "title_size_mobile": 28,
         "subtitle_size": 20,
         "bg_color_top": "#d58f26",
-        "bg_color_bottom": "#121212",
+        "bg_color_bottom": "#000000",
         "text_color": "#ffffff",
         "card_bg_color": "#ffffff",
         "card_text_color": "#2b2b2b",
@@ -459,13 +423,50 @@
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 30
       }
+    },
+    "custom_columns_icons_image_LM9k84": {
+      "type": "custom-columns-icons-image",
+      "name": "Columns Icons Image",
+      "settings": {
+        "title": "Rediscover your past. Everyday.",
+        "subtitle": "Through consistent daily use, here is what makes our formula suitable for your needs  to make you feel like YOU again.",
+        "title_size_desktop": 52,
+        "title_size_mobile": 34,
+        "subtitle_size": 18,
+        "bg_color_top": "#000000",
+        "bg_color_bottom": "#d58f26",
+        "text_color": "#ffffff",
+        "icon_color": "#ffffff",
+        "icon_1": "urology",
+        "label_1": "Prostate Support",
+        "icon_2": "bed",
+        "label_2": "Highly Concentrated Extracts",
+        "icon_3": "gastroenterology",
+        "label_3": "Gentle on the Stomach",
+        "icon_4": "experiment",
+        "label_4": "Third-Party Lab Tested",
+        "icon_size": 52,
+        "feature_text_size": 18,
+        "image": "shopify://shop_images/rings_2x_fb424de4-5b48-439e-bd65-12a63eb7f7e3.png",
+        "image_position": "right",
+        "image_width_desktop": 560,
+        "show_rings": true,
+        "column_gap_mobile": 20,
+        "row_gap_mobile": 22,
+        "column_gap_desktop": 40,
+        "row_gap_desktop": 80,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 0,
+        "padding_top_desktop": 36,
+        "padding_bottom_desktop": 0
+      }
     }
   },
   "order": [
     "main",
     "review-slider-2",
-    "custom_columns_icons_image_9R2kLm",
     "related-products",
-    "review_slider_3_cabtXH"
+    "review_slider_3_cabtXH",
+    "custom_columns_icons_image_LM9k84"
   ]
 }
