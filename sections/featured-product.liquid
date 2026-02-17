@@ -464,6 +464,41 @@
                 -%}
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
+              {%- when 'stock_warning' -%}
+                <div
+                  class="stock-warning-box"
+                  {{ block.shopify_attributes }}
+                  style="background-color: {{ block.settings.background_color }}; border: {{ block.settings.border_size }}px {{ block.settings.border_style }} {{ block.settings.border_color }}; border-radius: {{ block.settings.border_radius }}px; padding: {{ block.settings.padding }}px; margin-top: {{ block.settings.margin_top }}px; margin-bottom: {{ block.settings.margin_bottom }}px;"
+                >
+                  <div
+                    class="stock-warning-header"
+                    style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px; color: {{ block.settings.header_color }}; font-weight: 700; text-transform: uppercase; font-size: {{ block.settings.header_size }}px; letter-spacing: 0.5px;"
+                  >
+                    <span
+                      class="stock-icon"
+                      style="background-color: {{ block.settings.icon_background }}; color: {{ block.settings.icon_color }}; width: {{ block.settings.icon_size }}px; height: {{ block.settings.icon_size }}px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; font-size: {{ block.settings.icon_text_size }}px; line-height: 1; flex: 0 0 auto;"
+                    >
+                      {{ block.settings.icon_text }}
+                    </span>
+                    <span class="stock-title">{{ block.settings.title }}</span>
+                  </div>
+                  <div
+                    class="stock-text rte"
+                    style="margin: 0; font-size: {{ block.settings.text_size }}px; line-height: 1.5; color: {{ block.settings.text_color }};"
+                  >
+                    {{ block.settings.body }}
+                  </div>
+                </div>
+                <style>
+                  #shopify-section-{{ section.id }} .stock-warning-box a {
+                    color: {{ block.settings.link_color }};
+                    text-decoration: underline;
+                    font-weight: 500;
+                  }
+                  #shopify-section-{{ section.id }} .stock-warning-box strong {
+                    color: {{ block.settings.strong_color }};
+                  }
+                </style>
               {%- when 'payment_badges' -%}
                 <div class='payment-badges-block' style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;">
                   <ul class="payment-badges" role="list">
@@ -5171,6 +5206,204 @@
           "type": "liquid",
           "id": "custom_liquid",
           "label": "t:sections.featured-product.blocks.custom_liquid.settings.custom_liquid.label"
+        }
+      ]
+    },
+    {
+      "type": "stock_warning",
+      "name": "Stock warning",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "WARNING: Low Stock Notice"
+        },
+        {
+          "type": "text",
+          "id": "icon_text",
+          "label": "Icon text",
+          "default": "!"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Body",
+          "default": "<p>This product sold out <strong>12 times</strong> last year. We encourage you to take advantage of the <strong>limited sale</strong> and buy now. Subscribing protects you against future stockouts. <strong>PS:</strong> Only available here, do not buy <a href=\"#\">fakes on Amazon/eBay</a>.</p>"
+        },
+        {
+          "type": "header",
+          "content": "Colors"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background",
+          "default": "#fdf2f2"
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Border",
+          "default": "#d37373"
+        },
+        {
+          "type": "color",
+          "id": "header_color",
+          "label": "Header text",
+          "default": "#a94442"
+        },
+        {
+          "type": "color",
+          "id": "icon_background",
+          "label": "Icon background",
+          "default": "#a94442"
+        },
+        {
+          "type": "color",
+          "id": "icon_color",
+          "label": "Icon color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Body text",
+          "default": "#834040"
+        },
+        {
+          "type": "color",
+          "id": "strong_color",
+          "label": "Strong text",
+          "default": "#a94442"
+        },
+        {
+          "type": "color",
+          "id": "link_color",
+          "label": "Link color",
+          "default": "#834040"
+        },
+        {
+          "type": "header",
+          "content": "Sizing"
+        },
+        {
+          "type": "range",
+          "id": "header_size",
+          "min": 10,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Header size",
+          "default": 14
+        },
+        {
+          "type": "range",
+          "id": "text_size",
+          "min": 10,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Body size",
+          "default": 14
+        },
+        {
+          "type": "range",
+          "id": "icon_size",
+          "min": 12,
+          "max": 36,
+          "step": 1,
+          "unit": "px",
+          "label": "Icon circle size",
+          "default": 18
+        },
+        {
+          "type": "range",
+          "id": "icon_text_size",
+          "min": 8,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Icon text size",
+          "default": 12
+        },
+        {
+          "type": "header",
+          "content": "Box style"
+        },
+        {
+          "type": "range",
+          "id": "padding",
+          "min": 8,
+          "max": 40,
+          "step": 1,
+          "unit": "px",
+          "label": "Padding",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "border_size",
+          "min": 0,
+          "max": 6,
+          "step": 1,
+          "unit": "px",
+          "label": "Border size",
+          "default": 2
+        },
+        {
+          "type": "select",
+          "id": "border_style",
+          "label": "Border style",
+          "options": [
+            {
+              "value": "solid",
+              "label": "Solid"
+            },
+            {
+              "value": "dashed",
+              "label": "Dashed"
+            },
+            {
+              "value": "dotted",
+              "label": "Dotted"
+            }
+          ],
+          "default": "dashed"
+        },
+        {
+          "type": "range",
+          "id": "border_radius",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Corner radius",
+          "default": 4
+        },
+        {
+          "type": "header",
+          "content": "Block margin"
+        },
+        {
+          "type": "range",
+          "id": "margin_top",
+          "min": 0,
+          "max": 30,
+          "step": 3,
+          "unit": "px",
+          "label": "Top margin",
+          "default": 15
+        },
+        {
+          "type": "range",
+          "id": "margin_bottom",
+          "min": 0,
+          "max": 30,
+          "step": 3,
+          "unit": "px",
+          "label": "Bottom margin",
+          "default": 15
         }
       ]
     },
