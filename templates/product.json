@@ -562,6 +562,158 @@
         "animation_duration": 1000,
         "animation_threshold": 50
       }
+    },
+    "rr_new_table_hz3Mbd": {
+      "type": "rr-new-table",
+      "name": "RR New Table",
+      "blocks": {
+        "table_row_1R34pA": {
+          "type": "table_row",
+          "settings": {
+            "our_icon": "biotech",
+            "our_text": "Clinically Backed",
+            "other_icon": "cancel",
+            "other_text": "Trend-Driven Formulas"
+          }
+        },
+        "table_row_u4n3KD": {
+          "type": "table_row",
+          "settings": {
+            "our_icon": "verified_user",
+            "our_text": "3rd-Party Tested",
+            "other_icon": "cancel",
+            "other_text": "No Transparent Testing"
+          }
+        },
+        "table_row_b0bS5x": {
+          "type": "table_row",
+          "settings": {
+            "our_icon": "clean_hands",
+            "our_text": "Allergen-Free and Clean",
+            "other_icon": "cancel",
+            "other_text": "Fillers and Artificial Additives"
+          }
+        },
+        "table_row_i7eQx8": {
+          "type": "table_row",
+          "settings": {
+            "our_icon": "workspace_premium",
+            "our_text": "High-Quality Formula",
+            "other_icon": "cancel",
+            "other_text": "Inconsistent Quality"
+          }
+        },
+        "table_row_w9AN7R": {
+          "type": "table_row",
+          "settings": {
+            "our_icon": "air_freshener",
+            "our_text": "Odorless Aged Garlic Extract",
+            "other_icon": "cancel",
+            "other_text": "Strong Odor"
+          }
+        },
+        "check_item_7rB11m": {
+          "type": "check_item",
+          "settings": {
+            "text": "Clinically Backed Ingredients"
+          }
+        },
+        "check_item_t8R6Lk": {
+          "type": "check_item",
+          "settings": {
+            "text": "Noticeable Results in Weeks"
+          }
+        },
+        "check_item_j6Wz3n": {
+          "type": "check_item",
+          "settings": {
+            "text": "Long-Term Wellness"
+          }
+        },
+        "check_item_k0qP9s": {
+          "type": "check_item",
+          "settings": {
+            "text": "Clean, High-Quality Formula"
+          }
+        }
+      },
+      "block_order": [
+        "table_row_1R34pA",
+        "table_row_u4n3KD",
+        "table_row_b0bS5x",
+        "table_row_i7eQx8",
+        "table_row_w9AN7R",
+        "check_item_7rB11m",
+        "check_item_t8R6Lk",
+        "check_item_j6Wz3n",
+        "check_item_k0qP9s"
+      ],
+      "settings": {
+        "heading": "Elar\u00e9<strong>\u00ae</strong> vs. Other Brands",
+        "button_label": "Try Risk-Free Today",
+        "button_link": "shopify://products/pumpkin-seed-oil-softgels",
+        "subtext": "30-day money back guarantee",
+        "our_label": "Elar\u00e9",
+        "other_label": "Other Brands",
+        "our_image": "",
+        "other_image": "",
+        "bg_fallback_color": "#7f141a",
+        "bg_color_1": "#8a2b2b",
+        "bg_color_2": "#690e0e",
+        "bg_gradient_angle": 165,
+        "bg_image": "",
+        "bg_image_size": "cover",
+        "bg_image_position": "center center",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "text_color": "#ffffff",
+        "heading_color": "#ffffff",
+        "heading_accent_color": "#ffffff",
+        "our_col_bg": "#9f3f3f",
+        "our_col_text": "#ffffff",
+        "other_col_bg": "#ffffff",
+        "other_col_text": "#2b2b2b",
+        "other_col_border": "#f0f0f0",
+        "other_label_color": "#ffffff",
+        "row_divider_color": "#ffffff",
+        "checklist_color": "#ffffff",
+        "checklist_tick_color": "#ffffff",
+        "button_bg_color": "#ffffff",
+        "button_text_color": "#2b2b2b",
+        "button_border_color": "#ffffff",
+        "button_bg_hover_color": "#f2f2f2",
+        "button_text_hover_color": "#2b2b2b",
+        "button_border_hover_color": "#f2f2f2",
+        "button_radius": 6,
+        "left_width_desktop": 50,
+        "our_col_width": 55,
+        "columns_gap_desktop": 40,
+        "left_top_offset_desktop": 0,
+        "column_radius": 6,
+        "heading_size_desktop": 52,
+        "heading_size_mobile": 34,
+        "column_title_size": 20,
+        "column_title_size_mobile": 18,
+        "row_text_size": 16,
+        "row_text_size_mobile": 14,
+        "row_icon_size": 24,
+        "row_icon_size_mobile": 20,
+        "row_min_height_desktop": 86,
+        "row_min_height_mobile": 100,
+        "product_image_height_desktop": 106,
+        "product_image_height_mobile": 120,
+        "product_image_overlap": 86,
+        "product_image_overlap_mobile": 80,
+        "checklist_size": 17,
+        "checklist_size_mobile": 17,
+        "button_text_size": 19,
+        "subtext_size": 15,
+        "subtext_icon_size": 18,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_top_desktop": 36,
+        "padding_bottom_desktop": 36
+      }
     }
   },
   "order": [
@@ -570,6 +722,7 @@
     "related-products",
     "review_slider_3_cabtXH",
     "custom_columns_icons_image_LM9k84",
-    "clinical_proven_stats_t6y4kN"
+    "clinical_proven_stats_t6y4kN",
+    "rr_new_table_hz3Mbd"
   ]
 }
