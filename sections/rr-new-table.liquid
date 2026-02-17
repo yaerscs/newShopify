@@ -91,7 +91,7 @@
 
   .rr-table-{{ section.id }} .rr-table__col {
     border-radius: {{ section.settings.column_radius }}px;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     flex-direction: column;
   }
@@ -108,6 +108,13 @@
     color: {{ section.settings.other_col_text }};
     border: 1px solid {{ section.settings.other_col_border }};
     position: relative;
+    margin-top: {{ section.settings.other_col_shift_mobile }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .rr-table-{{ section.id }} .rr-table__col--other {
+      margin-top: {{ section.settings.other_col_shift_desktop }}px;
+    }
   }
 
   .rr-table-{{ section.id }} .rr-table__other-title {
@@ -147,6 +154,8 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    border-radius: 0 0 {{ section.settings.column_radius }}px {{ section.settings.column_radius }}px;
+    overflow: hidden;
   }
 
   .rr-table-{{ section.id }} .rr-table__row {
@@ -501,6 +510,8 @@
     { "type": "header", "content": "Sizing" },
     { "type": "range", "id": "left_width_desktop", "min": 40, "max": 70, "step": 1, "unit": "%", "label": "Left area width (desktop)", "default": 50 },
     { "type": "range", "id": "our_col_width", "min": 30, "max": 70, "step": 1, "unit": "%", "label": "Left card width inside table", "default": 55 },
+    { "type": "range", "id": "other_col_shift_desktop", "min": -60, "max": 120, "step": 2, "unit": "px", "label": "Other column vertical shift (desktop)", "default": 18 },
+    { "type": "range", "id": "other_col_shift_mobile", "min": -60, "max": 120, "step": 2, "unit": "px", "label": "Other column vertical shift (mobile)", "default": 0 },
     { "type": "range", "id": "columns_gap_desktop", "min": 8, "max": 120, "step": 2, "unit": "px", "label": "Gap between table and right content", "default": 40 },
     { "type": "range", "id": "left_top_offset_desktop", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Left area top offset (desktop)", "default": 0 },
     { "type": "range", "id": "column_radius", "min": 0, "max": 24, "step": 1, "unit": "px", "label": "Column corner radius", "default": 6 },
