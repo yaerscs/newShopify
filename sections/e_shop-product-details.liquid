@@ -240,7 +240,6 @@
 
     bundleRadios.forEach(radio => {
       radio.addEventListener("change", function() {
-        const currentQuantity = this.value;
         const parentElem = this.parentElement;
         const curPrice = parentElem.querySelector(".kaching-bundles__bar-price").innerText;
         const curComparePrice = parentElem.querySelector(".kaching-bundles__bar-full-price").innerText;
@@ -251,9 +250,8 @@
         productPriceLabel.innerHTML = curPrice;
         comparePriceLabel.innerText = curComparePrice;
 
-        form.querySelectorAll('input[type="hidden"][name="quantity"]').forEach(el => el.remove());
-        addQuantityElem(currentQuantity);
-        form.setAttribute('data-quantity', currentQuantity);
+        // NOTE: Do NOT modify form quantity inputs here.
+        // Kaching Bundles handles quantity and gifts through its own fetch interceptor.
       });
     });
   }
