@@ -252,6 +252,7 @@
         comparePriceLabel.innerText = curComparePrice;
 
         form.querySelectorAll('input[type="hidden"][name="quantity"]').forEach(el => el.remove());
+        addQuantityElem(currentQuantity);
         form.setAttribute('data-quantity', currentQuantity);
       });
     });
