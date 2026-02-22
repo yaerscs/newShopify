@@ -85,7 +85,7 @@
             "option_1_label": "<strong>Buy [quantity]</strong>",
             "option_1_benefit": "",
             "option_1_caption": "You save [amount_saved]",
-            "option_1_price_text": "<strong><em>[price]</em></strong>",
+            "option_1_price_text": "<em><strong>[price]</strong></em>",
             "option_1_compare_price_text": "[compare_price]",
             "option_1_badge_style": "1",
             "option_1_badge_color": "accent-1",
@@ -101,7 +101,7 @@
             "option_2_label": "<strong>Buy [quantity]</strong>",
             "option_2_benefit": "",
             "option_2_caption": "You save [amount_saved]",
-            "option_2_price_text": "<strong><em>[price]</em></strong>",
+            "option_2_price_text": "<em><strong>[price]</strong></em>",
             "option_2_compare_price_text": "[compare_price]",
             "option_2_badge_style": "1",
             "option_2_badge_color": "accent-1",
@@ -117,7 +117,7 @@
             "option_3_label": "<strong>Buy [quantity]</strong>",
             "option_3_benefit": "",
             "option_3_caption": "You save [amount_saved]",
-            "option_3_price_text": "<strong><em>[price]</em></strong>",
+            "option_3_price_text": "<em><strong>[price]</strong></em>",
             "option_3_compare_price_text": "[compare_price]",
             "option_3_badge_style": "1",
             "option_3_badge_color": "accent-1",
@@ -133,7 +133,7 @@
             "option_4_label": "<strong>Buy [quantity]</strong>",
             "option_4_benefit": "",
             "option_4_caption": "You save [amount_saved]",
-            "option_4_price_text": "<strong><em>[price]</em></strong>",
+            "option_4_price_text": "<em><strong>[price]</strong></em>",
             "option_4_compare_price_text": "[compare_price]",
             "option_4_badge_style": "1",
             "option_4_badge_color": "accent-1",
@@ -205,6 +205,13 @@
             "filled_icon_4": false,
             "margin_top": 15,
             "margin_bottom": 15
+          }
+        },
+        "kaching_bundles_app_block_Gz98LW": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "{{product}}",
+            "manual_deal_block_id": ""
           }
         },
         "buy_buttons": {
@@ -359,6 +366,7 @@
         "a6eb81db-40e4-43e0-972f-32db010a4a56",
         "title",
         "text_d7VUAy",
+        "kaching_bundles_app_block_Gz98LW",
         "buy_buttons",
         "description",
         "text_iBA3k9",
