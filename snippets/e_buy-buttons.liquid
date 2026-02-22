@@ -99,10 +99,10 @@
           {%- if gift_card_recipient_feature_active -%}
             {%- render 'e_gift-card-recipient-form', product: product, form: form, section: section -%}
           {%- endif -%}
+
           {% unless has_quantity_selector %}
             <input type="hidden" name="quantity" value="1">
           {% endunless %}
-
           
           <button type="submit" name="add" class="gb-sumbit-free shop-add-to-cart-button{% if product.selected_or_first_available_variant.available == false %} sold-out{% endif %}" style="background-color: {% if block.settings.use_theme_colors %}{% if settings.use_dedicated_button_colors %}{% if settings.global_section_button_color != blank %}{{ settings.global_section_button_color }}{% else %}{{ settings.global_section_accent_1_color }}{% endif %}{% else %}{{ settings.global_section_accent_1_color }}{% endif %}{% else %}{{ button_bg_color }}{% endif %}; color: {% if block.settings.use_theme_colors %}{% if settings.use_dedicated_button_colors %}{% if settings.global_section_button_text_color != blank %}{{ settings.global_section_button_text_color }}{% else %}{{ settings.global_section_background_color }}{% endif %}{% else %}{{ settings.global_section_background_color }}{% endif %}{% else %}{{ button_text_color }}{% endif %}; --button-hover-color: {% if block.settings.use_theme_colors %}{% if settings.use_dedicated_button_colors %}{% if settings.global_section_button_color != blank %}{{ settings.global_section_button_color | color_darken: 5 }}{% else %}{{ settings.global_section_accent_1_color | color_darken: 5 }}{% endif %}{% else %}{{ settings.global_section_accent_1_color | color_darken: 5 }}{% endif %}{% else %}{{ button_hover_color }}{% endif %};"{% if product.selected_or_first_available_variant.available == false
             or quantity_rule_soldout
