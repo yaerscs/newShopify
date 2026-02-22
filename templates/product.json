@@ -12,69 +12,7 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "a6eb81db-40e4-43e0-972f-32db010a4a56": {
-          "type": "rating_stars",
-          "settings": {
-            "rating": 4.4,
-            "star_color": "#ffcc00",
-            "bg_stars_style": "full",
-            "bg_star_color": "#ececec",
-            "label": "Rated <strong>4.8 Excellent </strong>5273+ Reviews",
-            "size": 14,
-            "alignment": "flex-start",
-            "scroll_id": "",
-            "margin_top": 0,
-            "margin_bottom": 9
-          }
-        },
-        "title": {
-          "type": "title",
-          "settings": {
-            "text_size": "h1",
-            "title_alignment": "left",
-            "uppercase_title": false,
-            "custom_title_text": "Become Free Of The Nightly Bathroom Loop",
-            "margin_top": 0,
-            "margin_bottom": 0
-          }
-        },
-        "text_d7VUAy": {
-          "type": "text",
-          "settings": {
-            "mobile_text_size": 14,
-            "desktop_text_size": 16,
-            "alignment": "left",
-            "text_color": "#2e2a39",
-            "icon_scale": 120,
-            "icon_color": "#d58f26",
-            "width": "100%",
-            "direction": "vertical",
-            "column_gap": 3,
-            "styling_container": "container",
-            "enable_bg": false,
-            "bg_color": "#f3f3f3",
-            "corner_radius": 40,
-            "padding": 3,
-            "border_size": 0,
-            "border_style": "solid",
-            "border_color": "#b7b7b7",
-            "text_1": "Promotes Prostate Health",
-            "icon_1": "check_circle",
-            "filled_icon_1": true,
-            "text_2": "Free From Side Effects",
-            "icon_2": "check_circle",
-            "filled_icon_2": true,
-            "text_3": "Made With Highly Concentrated Extracts",
-            "icon_3": "check_circle",
-            "filled_icon_3": true,
-            "text_4": "",
-            "icon_4": "check_circle",
-            "filled_icon_4": false,
-            "margin_top": 15,
-            "margin_bottom": 15
-          }
-        },
-        "quantity_selector_TV3bVU": {
+        "quantity_selector_LGnQQV": {
           "type": "quantity_selector",
           "settings": {
             "full_width_classic": false,
@@ -147,7 +85,7 @@
             "option_1_label": "<strong>Buy [quantity]</strong>",
             "option_1_benefit": "",
             "option_1_caption": "You save [amount_saved]",
-            "option_1_price_text": "<em><strong>[price]</strong></em>",
+            "option_1_price_text": "<strong><em>[price]</em></strong>",
             "option_1_compare_price_text": "[compare_price]",
             "option_1_badge_style": "1",
             "option_1_badge_color": "accent-1",
@@ -163,7 +101,7 @@
             "option_2_label": "<strong>Buy [quantity]</strong>",
             "option_2_benefit": "",
             "option_2_caption": "You save [amount_saved]",
-            "option_2_price_text": "<em><strong>[price]</strong></em>",
+            "option_2_price_text": "<strong><em>[price]</em></strong>",
             "option_2_compare_price_text": "[compare_price]",
             "option_2_badge_style": "1",
             "option_2_badge_color": "accent-1",
@@ -179,7 +117,7 @@
             "option_3_label": "<strong>Buy [quantity]</strong>",
             "option_3_benefit": "",
             "option_3_caption": "You save [amount_saved]",
-            "option_3_price_text": "<em><strong>[price]</strong></em>",
+            "option_3_price_text": "<strong><em>[price]</em></strong>",
             "option_3_compare_price_text": "[compare_price]",
             "option_3_badge_style": "1",
             "option_3_badge_color": "accent-1",
@@ -195,7 +133,7 @@
             "option_4_label": "<strong>Buy [quantity]</strong>",
             "option_4_benefit": "",
             "option_4_caption": "You save [amount_saved]",
-            "option_4_price_text": "<em><strong>[price]</strong></em>",
+            "option_4_price_text": "<strong><em>[price]</em></strong>",
             "option_4_compare_price_text": "[compare_price]",
             "option_4_badge_style": "1",
             "option_4_badge_color": "accent-1",
@@ -203,6 +141,68 @@
             "option_4_benefit_style": "outlined",
             "option_4_benefit_radius": 45,
             "option_4_benefit_color": "accent-1",
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "a6eb81db-40e4-43e0-972f-32db010a4a56": {
+          "type": "rating_stars",
+          "settings": {
+            "rating": 4.4,
+            "star_color": "#ffcc00",
+            "bg_stars_style": "full",
+            "bg_star_color": "#ececec",
+            "label": "Rated <strong>4.8 Excellent </strong>5273+ Reviews",
+            "size": 14,
+            "alignment": "flex-start",
+            "scroll_id": "",
+            "margin_top": 0,
+            "margin_bottom": 9
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "text_size": "h1",
+            "title_alignment": "left",
+            "uppercase_title": false,
+            "custom_title_text": "Become Free Of The Nightly Bathroom Loop",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "text_d7VUAy": {
+          "type": "text",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "left",
+            "text_color": "#2e2a39",
+            "icon_scale": 120,
+            "icon_color": "#d58f26",
+            "width": "100%",
+            "direction": "vertical",
+            "column_gap": 3,
+            "styling_container": "container",
+            "enable_bg": false,
+            "bg_color": "#f3f3f3",
+            "corner_radius": 40,
+            "padding": 3,
+            "border_size": 0,
+            "border_style": "solid",
+            "border_color": "#b7b7b7",
+            "text_1": "Promotes Prostate Health",
+            "icon_1": "check_circle",
+            "filled_icon_1": true,
+            "text_2": "Free From Side Effects",
+            "icon_2": "check_circle",
+            "filled_icon_2": true,
+            "text_3": "Made With Highly Concentrated Extracts",
+            "icon_3": "check_circle",
+            "filled_icon_3": true,
+            "text_4": "",
+            "icon_4": "check_circle",
+            "filled_icon_4": false,
             "margin_top": 15,
             "margin_bottom": 15
           }
@@ -400,10 +400,10 @@
         }
       },
       "block_order": [
+        "quantity_selector_LGnQQV",
         "a6eb81db-40e4-43e0-972f-32db010a4a56",
         "title",
         "text_d7VUAy",
-        "quantity_selector_TV3bVU",
         "variant_picker_twfegh",
         "kaching_bundles_app_block_Gz98LW",
         "buy_buttons",
