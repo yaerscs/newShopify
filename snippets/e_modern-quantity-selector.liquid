@@ -30,11 +30,10 @@
   </button>
   <input class="quantity-input"
          type="number"
-         name="quantity"
          id="{{ unique_id }}"
          min="1"
          value="{{ quantity_value }}"
-         form="{{ product_form_id }}"
+         data-form-id="{{ product_form_id }}"
          data-product-id="{{ product.id }}"
          data-min="1"
          data-cart-app-quantity="true"
@@ -169,9 +168,9 @@
         const input = selector.querySelector('.quantity-input');
         if (!minusButton || !plusButton || !input) return;
         
-        const formId = input.getAttribute('form');
+        const formId = input.getAttribute('data-form-id');
         if (!formId) {
-          console.warn('Quantity input is missing form attribute');
+          console.warn('Quantity input is missing data-form-id attribute');
           return;
         }
         
@@ -194,13 +193,21 @@
           }
         }
         
-        // Function to ensure form has our quantity value
+        // Function to ensure form has our quantity value via a hidden input
         function setupFormSync() {
           const form = document.getElementById(formId);
           if (!form) return false;
           
-          // Find any hidden quantity inputs in the form and remove them
+          // Remove any existing hidden quantity inputs
           form.querySelectorAll('input[type="hidden"][name="quantity"]').forEach(el => el.remove());
+          
+          // Create a hidden quantity input INSIDE the form to sync the value
+          const hiddenQty = document.createElement('input');
+          hiddenQty.type = 'hidden';
+          hiddenQty.name = 'quantity';
+          hiddenQty.value = input.value;
+          hiddenQty.setAttribute('data-synced-quantity', 'true');
+          form.appendChild(hiddenQty);
           
           // Update the data-quantity attribute on the form
           form.setAttribute('data-quantity', input.value);
@@ -211,6 +218,9 @@
             if (parseInt(input.value) < 1 || isNaN(parseInt(input.value))) {
               input.value = 1;
             }
+            
+            // Sync hidden input value
+            hiddenQty.value = input.value;
             
             // Update form's data-quantity attribute
             form.setAttribute('data-quantity', input.value);
@@ -229,16 +239,10 @@
             }));
           });
           
-          // Intercept form submission
+          // Intercept form submission to ensure sync
           form.addEventListener('submit', function(e) {
-            // Make sure the form has the latest quantity value
-            const currentQuantity = input.value;
-            
-            // Find and remove any hidden quantity inputs to avoid conflicts
-            form.querySelectorAll('input[type="hidden"][name="quantity"]').forEach(el => el.remove());
-            
-            // Update data-quantity attribute
-            form.setAttribute('data-quantity', currentQuantity);
+            hiddenQty.value = input.value;
+            form.setAttribute('data-quantity', input.value);
           });
           
           return true;
