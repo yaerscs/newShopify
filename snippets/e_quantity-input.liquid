@@ -41,7 +41,7 @@
     id="Quantity-{{ variant.id }}"
     data-index="{{ variant.id }}"
     data-target="quantity-input-{{ variant.id }}"
-    {% if product_form_id %}form="{{ product_form_id }}"{% endif %}
+    {% if product_form_id %}data-form-id="{{ product_form_id }}"{% endif %}
   >
   <button class="quantity__button" name="plus" type="button" data-target="increment-{{ variant.id }}">
     <span class="visually-hidden">
